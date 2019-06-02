@@ -13,8 +13,7 @@ The Hipster Shop includes 10 microservices.  Full details of the architecture
 and implementation of the Hipster Shop are available in that project.  This
 architecture diagram shows how the Hipster shop was split across 3 clouds.
 
-![Alt text]("Multicloud Demo at  Kubecon 2019 EU - Hipster Architecture Diagram.svg")<img src="./assets/Kubecon 2019 EU - Hipster Architecture Diagram.svg">
-
+<img src="./assets/Kubecon 2019 EU - Hipster Architecture Diagram.svg">
 
 
 ## Files in this repository
