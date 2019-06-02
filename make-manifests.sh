@@ -92,7 +92,7 @@ ONPREM_SVCS=("adservice"
 	"currencyservice"
 	"redis")
 
-mk_kubernetes_manifest
+mk_kubernetes_manifest $ONPREM_SVCS
 
 mk_istio_manifests
 
