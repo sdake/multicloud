@@ -7,11 +7,20 @@ demonstration was originally given to the audience at
 
 - [Reinventing Networking: A Deep Dive into Istio's Multicluster Gateways - Steve Dake, Independent](https://youtu.be/-t2BfT59zJA)
 
+For those that want to skip ahead, the
+[demo is here](https://youtu.be/-t2BfT59zJA?t=982).
+
+The objective of this repository is to teach new contributors how multicloud
+works with [Istio](https://istio.io).  As such, nothing all that advanced
+is used beyond `bash`, `helm`, and `kubectl` commands.  Once you are up
+to speed, come [join us](https://istio.io/about/community/join/)
+develop `#multicloud` in the [Istio](https://github.com/istio) project.
+
 ## Architecture
 
 The Hipster Shop includes 10 microservices.  Full details of the architecture
 and implementation of the Hipster Shop are available in that project.  This
-architecture diagram shows how the Hipster shop was split across 3 clouds.
+architecture diagram shows how the Hipster shop is split across 3 clouds.
 
 <img src="./assets/Kubecon 2019 EU - Hipster Architecture Diagram.svg">
 
@@ -29,10 +38,46 @@ architecture diagram shows how the Hipster shop was split across 3 clouds.
 These steps are incomplete.  This text will be removed when the steps are
 accurate and confirmed.
 
+### Prequisities
+
+- There must be at minimum one Kubernetes control plane node and 1 Kubernetes
+  worker node.  Most kubernetes cloud controllers suffer from
+  [an issue](https://github.com/kubernetes/kubeadm/issues/425)
+  that does not permit the scheduling of services of type load balancer to an
+  `all-in-one` deployment.
+- For On-Premises clusters using
+  [metallb](https://metallb.universe.tf/installation/), `all-in-one`
+  deployments Of Kubernetes and Istio work well.
+- Three clusters are needed.  This demo uses Azure AKS, Google Cloud's GKE,
+  and Kubernetes deployed on-premesis.  The demo works equally well in one cloud
+  provider or many.  To demonstrate the full power of [Istio](https://istio.io)
+  the most challenging deployment scenario was chosen.
+- Each cluster must implement a proper load balancer.  Network load balancers
+  are the optimal choice, although others can be made to work with some
+  specific hacks, err, `systems engineering`.
+- One load balancer must be available in the quota of the cloud provider.
+- Sufficient security group rules quota must be available for Istio and the
+  demonstration app.  I have found through experimentation this number is
+  at most 200 rules per cluster.  Amazon Web Services defaults to 60 security
+  groups per VPC, so you will need to request a quota increase to run
+  this demo against AWS.
+- Each cluster must meet the minimum requirements below to launch the demo
+  properly.  The CPU/Memory requests have been set to their minimums for Istio
+  in the Istio manifests.
+
+| CPU | Memory |
+| --- | --- |
+| 10 vCPU | 16.0 GiB |
+
 ### Deploy an AKS cluster
 
-Please follow the 5 minute quickstart for [Azure CLI](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) or [Azure Portal](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal) to deploy a properly sized K8s cluster.  At this time, a properly sized Cluster includes 3 nodes, 8 vCPUs, and atleast 16gb of RAM.
+Please follow the 5 minute quickstart for [Azure CLI](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) or [Azure Portal](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal) to deploy a properly sized K8s cluster.
 
 ### Deploy a GKE cluster
 
-Please follow the [GKE How-To](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster) to deploy a properly sized K8s cluster.  At this time, a properly sized cluster includes 3 nodes, 8 vCPUs, and atleast 16gb of RAM.
+Please follow the [GKE How-To](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster) to deploy a properly sized K8s cluster.
+
+### Deploy an On-Premises cluster
+
+Please install Kubernetes and kubeadm and deploy an `all-in-one` cluster with
+[metallb](https://metallb.universe.tf/installation/).
