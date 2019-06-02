@@ -32,7 +32,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: docker.io/emailservice:sdake
+        image: docker.io/sdake/emailservice:sdake
         ports:
         - containerPort: 8080
         env:

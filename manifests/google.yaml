@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: docker.io/frontend:sdake
+          image: docker.io/sdake/frontend:sdake
           ports:
           - containerPort: 8080
           readinessProbe:

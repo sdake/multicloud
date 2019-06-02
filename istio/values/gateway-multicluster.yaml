@@ -1,0 +1,32 @@
+global:
+  defaultResources:
+    requests:
+      cpu: 0m
+      memory: 0Mi
+
+  proxy:
+    resources:
+      requests:
+        cpu: 0m
+        memory: 0Mi
+
+  podDNSSearchNamespaces:
+  - global
+
+  multiCluster:
+    enabled: true
+
+  controlPlaneSecurityEnabled: true
+
+security:
+  selfSigned: false
+
+istiocoredns:
+  enabled: true
+
+gateways:
+  istio-egressgateway:
+    enabled: true
+    env:
+      # Needed to route traffic via egress gateway if desired.
+      ISTIO_META_REQUESTED_NETWORK_VIEW: "external"
