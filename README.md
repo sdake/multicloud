@@ -32,6 +32,7 @@ architecture diagram shows how the Hipster shop is split across 3 clouds.
 | `license_header.txt` | A license header placed at the front of every K8s manifest |
 | `make-manifests.sh` | Creates K8s manifests from a git clone of `../microservices-demo` |
 | `manifests` | Manifests generated from the `make-manifests.sh` script |
+| `onprem` | Scripts to install docker, kubeadm/kubelet, and deploy Kubernetes |
 
 ## Deploying the three (3) Kubernetes environments:
 
@@ -81,3 +82,11 @@ Please follow the [GKE How-To](https://cloud.google.com/kubernetes-engine/docs/h
 
 Please install Kubernetes and kubeadm and deploy an `all-in-one` cluster with
 [metallb](https://metallb.universe.tf/installation/).
+
+There are several helper scripts in the `onprem` directory to install Kubernetes
+and depooy Kubernetes 1.14.2 with metallb.  I recommend using these if you don't
+already have Kubernetes up and running.
+
+In any event, it is mandatory to intall a Load Balancer provider.  Typically
+this is provided by an internal or external cloud provider, however, in the
+case of bare metal, metallb works well for this purpose.

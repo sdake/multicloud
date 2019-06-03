@@ -1,0 +1,36 @@
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+maxPods: 400
+---
+apiVersion: kubeadm.k8s.io/v1beta1
+kind: ClusterConfiguration
+apiServer:
+  extraArgs:
+    authorization-mode: Node,RBAC
+  timeoutForControlPlane: 4m0s
+  certSANs:
+# Put your public IP address for your Internet connection in this
+# field.
+# Ensure port 8443 and 15443 are port-forwarded by your firewall/router.
+# WARNING: This port forward will enable kubeapi and the Istio gateway
+# port to be accessible anywhere on the Internet, so use caution when using
+# the sample certificates as they are widely known.  It is best to generate
+# your own root CA and intermediate certificates for Istio to use.
+  - "105.1.1.1"
+certificatesDir: /etc/kubernetes/pki
+clusterName: kubernetes
+controlPlaneEndpoint: ""
+controllerManager: {}
+dns:
+  type: CoreDNS
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+imageRepository: k8s.gcr.io
+kubernetesVersion: v1.14.2
+networking:
+  dnsDomain: cluster.local
+  podSubnet: ""
+  serviceSubnet: 10.96.0.0/12
+scheduler: {}
+---
