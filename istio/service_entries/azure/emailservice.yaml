@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: emailservice
+spec:
+  hosts:
+  - emailservice.default.global
+  location: MESH_INTERNAL
+  ports:
+  - name: grpc
+    number: 5000
+    protocol: grpc
+  resolution: STATIC
+  addresses:
+  - 127.255.0.2
+  endpoints:
+  - address: GATEWAY1
+    ports:
+      grpc: 15443
+---

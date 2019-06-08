@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: productcatalogservice
+spec:
+  hosts:
+  - productcatalogservice.default.global
+  location: MESH_INTERNAL
+  ports:
+  - name: grpc
+    number: 3550
+    protocol: grpc
+  resolution: STATIC
+  addresses:
+  - 127.255.1.2
+  endpoints:
+  - address: GATEWAY2
+    ports:
+      grpc: 15443
+---

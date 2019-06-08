@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: redis-cart
+spec:
+  hosts:
+  - redis-cart.default.global
+  location: MESH_INTERNAL
+  ports:
+  - name: redis
+    number: 6379
+    protocol: tcp
+  resolution: STATIC
+  addresses:
+  - 127.255.3.6
+  endpoints:
+  - address: GATEWAY3
+    ports:
+      redis: 15443
+---

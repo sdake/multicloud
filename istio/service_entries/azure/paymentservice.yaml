@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: paymentservice
+spec:
+  hosts:
+  - paymentservice.default.global
+  location: MESH_INTERNAL
+  ports:
+  - name: grpc
+    number: 50051
+    protocol: grpc
+  resolution: STATIC
+  addresses:
+  - 127.255.0.3
+  endpoints:
+  - address: GATEWAY1
+    ports:
+      grpc: 15443
+---

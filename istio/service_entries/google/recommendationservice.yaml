@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: recommendationservice
+spec:
+  hosts:
+  - recommendationservice.default.global
+  location: MESH_INTERNAL
+  ports:
+  - name: grpc
+    number: 8080
+    protocol: grpc
+  resolution: STATIC
+  addresses:
+  - 127.255.1.3
+  endpoints:
+  - address: GATEWAY2
+    ports:
+      grpc: 15443
+---
