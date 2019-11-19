@@ -12,7 +12,7 @@ spec:
     protocol: grpc
   resolution: STATIC
   addresses:
-  - 127.255.0.4
+  - 240.255.0.4
   endpoints:
   - address: GATEWAY1
     ports:

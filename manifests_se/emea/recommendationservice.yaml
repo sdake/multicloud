@@ -1,20 +1,20 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: ServiceEntry
 metadata:
-  name: cartservice
+  name: recommendationservice
 spec:
   hosts:
-  - cartservice.default.global
+  - recommendationservice.default.global
   location: MESH_INTERNAL
   ports:
   - name: grpc
-    number: 7070
+    number: 8080
     protocol: grpc
   resolution: STATIC
   addresses:
-  - 240.255.3.3
+  - 240.255.1.3
   endpoints:
-  - address: GATEWAY3
+  - address: 159.122.148.147
     ports:
       grpc: 15443
 ---

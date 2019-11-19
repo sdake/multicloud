@@ -14,7 +14,7 @@ spec:
   addresses:
   - 240.255.3.6
   endpoints:
-  - address: GATEWAY3
+  - address: 135.90.77.34
     ports:
       redis: 15443
 ---

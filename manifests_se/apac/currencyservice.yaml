@@ -1,20 +1,20 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: ServiceEntry
 metadata:
-  name: redis-cart
+  name: currencyservice
 spec:
   hosts:
-  - redis-cart.default.global
+  - currencyservice.default.global
   location: MESH_INTERNAL
   ports:
-  - name: redis
-    number: 6379
-    protocol: tcp
+  - name: grpc
+    number: 7000
+    protocol: grpc
   resolution: STATIC
   addresses:
-  - 240.255.3.6
+  - 240.255.3.5
   endpoints:
-  - address: GATEWAY3
+  - address: 135.90.77.34
     ports:
-      redis: 15443
+      grpc: 15443
 ---

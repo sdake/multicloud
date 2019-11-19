@@ -404,723 +404,6 @@ spec:
 kind: CustomResourceDefinition
 apiVersion: apiextensions.k8s.io/v1beta1
 metadata:
-  name: bypasses.config.istio.io
-  labels:
-    app: mixer
-    package: bypass
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: bypass
-    plural: bypasses
-    singular: bypass
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: circonuses.config.istio.io
-  labels:
-    app: mixer
-    package: circonus
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: circonus
-    plural: circonuses
-    singular: circonus
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: deniers.config.istio.io
-  labels:
-    app: mixer
-    package: denier
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: denier
-    plural: deniers
-    singular: denier
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: fluentds.config.istio.io
-  labels:
-    app: mixer
-    package: fluentd
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: fluentd
-    plural: fluentds
-    singular: fluentd
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: kubernetesenvs.config.istio.io
-  labels:
-    app: mixer
-    package: kubernetesenv
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: kubernetesenv
-    plural: kubernetesenvs
-    singular: kubernetesenv
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: listcheckers.config.istio.io
-  labels:
-    app: mixer
-    package: listchecker
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: listchecker
-    plural: listcheckers
-    singular: listchecker
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: memquotas.config.istio.io
-  labels:
-    app: mixer
-    package: memquota
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: memquota
-    plural: memquotas
-    singular: memquota
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: noops.config.istio.io
-  labels:
-    app: mixer
-    package: noop
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: noop
-    plural: noops
-    singular: noop
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: opas.config.istio.io
-  labels:
-    app: mixer
-    package: opa
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: opa
-    plural: opas
-    singular: opa
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: prometheuses.config.istio.io
-  labels:
-    app: mixer
-    package: prometheus
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: prometheus
-    plural: prometheuses
-    singular: prometheus
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: rbacs.config.istio.io
-  labels:
-    app: mixer
-    package: rbac
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: rbac
-    plural: rbacs
-    singular: rbac
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: redisquotas.config.istio.io
-  labels:
-    app: mixer
-    package: redisquota
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: redisquota
-    plural: redisquotas
-    singular: redisquota
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: signalfxs.config.istio.io
-  labels:
-    app: mixer
-    package: signalfx
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: signalfx
-    plural: signalfxs
-    singular: signalfx
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: solarwindses.config.istio.io
-  labels:
-    app: mixer
-    package: solarwinds
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: solarwinds
-    plural: solarwindses
-    singular: solarwinds
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: stackdrivers.config.istio.io
-  labels:
-    app: mixer
-    package: stackdriver
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: stackdriver
-    plural: stackdrivers
-    singular: stackdriver
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: statsds.config.istio.io
-  labels:
-    app: mixer
-    package: statsd
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: statsd
-    plural: statsds
-    singular: statsd
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: stdios.config.istio.io
-  labels:
-    app: mixer
-    package: stdio
-    istio: mixer-adapter
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: stdio
-    plural: stdios
-    singular: stdio
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: apikeys.config.istio.io
-  labels:
-    app: mixer
-    package: apikey
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: apikey
-    plural: apikeys
-    singular: apikey
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: authorizations.config.istio.io
-  labels:
-    app: mixer
-    package: authorization
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: authorization
-    plural: authorizations
-    singular: authorization
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: checknothings.config.istio.io
-  labels:
-    app: mixer
-    package: checknothing
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: checknothing
-    plural: checknothings
-    singular: checknothing
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: kuberneteses.config.istio.io
-  labels:
-    app: mixer
-    package: adapter.template.kubernetes
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: kubernetes
-    plural: kuberneteses
-    singular: kubernetes
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: listentries.config.istio.io
-  labels:
-    app: mixer
-    package: listentry
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: listentry
-    plural: listentries
-    singular: listentry
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: logentries.config.istio.io
-  labels:
-    app: mixer
-    package: logentry
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: logentry
-    plural: logentries
-    singular: logentry
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
-  additionalPrinterColumns:
-  - JSONPath: .spec.severity
-    description: The importance of the log entry
-    name: Severity
-    type: string
-  - JSONPath: .spec.timestamp
-    description: The time value for the log entry
-    name: Timestamp
-    type: string
-  - JSONPath: .spec.monitored_resource_type
-    description: Optional expression to compute the type of the monitored resource this log entry is being recorded on
-    name: Res Type
-    type: string
-  - JSONPath: .metadata.creationTimestamp
-    description: |-
-      CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
-
-      Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
-    name: Age
-    type: date
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: edges.config.istio.io
-  labels:
-    app: mixer
-    package: edge
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: edge
-    plural: edges
-    singular: edge
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: metrics.config.istio.io
-  labels:
-    app: mixer
-    package: metric
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: metric
-    plural: metrics
-    singular: metric
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: quotas.config.istio.io
-  labels:
-    app: mixer
-    package: quota
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: quota
-    plural: quotas
-    singular: quota
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: reportnothings.config.istio.io
-  labels:
-    app: mixer
-    package: reportnothing
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: reportnothing
-    plural: reportnothings
-    singular: reportnothing
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: tracespans.config.istio.io
-  labels:
-    app: mixer
-    package: tracespan
-    istio: mixer-instance
-    chart: istio
-    heritage: Tiller
-    release: istio
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: tracespan
-    plural: tracespans
-    singular: tracespan
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
   name: rbacconfigs.rbac.istio.io
   labels:
     app: mixer
@@ -1305,50 +588,6 @@ spec:
   scope: Namespaced
   version: v1alpha2
 ---
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: cloudwatches.config.istio.io
-  labels:
-    app: mixer
-    package: cloudwatch
-    istio: mixer-adapter
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: cloudwatch
-    plural: cloudwatches
-    singular: cloudwatch
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
-kind: CustomResourceDefinition
-apiVersion: apiextensions.k8s.io/v1beta1
-metadata:
-  name: dogstatsds.config.istio.io
-  labels:
-    app: mixer
-    package: dogstatsd
-    istio: mixer-adapter
-  annotations:
-    "helm.sh/resource-policy": keep
-spec:
-  group: config.istio.io
-  names:
-    kind: dogstatsd
-    plural: dogstatsds
-    singular: dogstatsd
-    categories:
-    - istio-io
-    - policy-istio-io
-  scope: Namespaced
-  version: v1alpha2
----
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
@@ -1375,24 +614,23 @@ spec:
 kind: CustomResourceDefinition
 apiVersion: apiextensions.k8s.io/v1beta1
 metadata:
-  name: zipkins.config.istio.io
+  name: authorizationpolicies.rbac.istio.io
   labels:
-    app: mixer
-    package: zipkin
-    istio: mixer-adapter
-  annotations:
-    "helm.sh/resource-policy": keep
+    app: istio-pilot
+    istio: rbac
+    heritage: Tiller
+    release: istio
 spec:
-  group: config.istio.io
+  group: rbac.istio.io
   names:
-    kind: zipkin
-    plural: zipkins
-    singular: zipkin
+    kind: AuthorizationPolicy
+    plural: authorizationpolicies
+    singular: authorizationpolicy
     categories:
-    - istio-io
-    - policy-istio-io
+      - istio-io
+      - rbac-istio-io
   scope: Namespaced
-  version: v1alpha2
+  version: v1alpha1
 ---
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
@@ -1475,6 +713,7 @@ spec:
     shortNames:
       - cert
       - certs
+---
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
@@ -1548,6 +787,7 @@ spec:
     kind: Challenge
     plural: challenges
   scope: Namespaced
+---
 ---
 # Source: istio/charts/galley/templates/poddisruptionbudget.yaml
 
@@ -1628,7 +868,7 @@ metadata:
     chart: mixer
     heritage: Tiller
     release: istio
-    version: 1.1.0
+    version: 1.2.6
     istio: mixer
     istio-mixer-type: policy
 spec:
@@ -1651,7 +891,7 @@ metadata:
     chart: mixer
     heritage: Tiller
     release: istio
-    version: 1.1.0
+    version: 1.2.6
     istio: mixer
     istio-mixer-type: telemetry
 spec:
@@ -1689,6 +929,26 @@ spec:
       istio: pilot
 
 ---
+# Source: istio/charts/sidecarInjectorWebhook/templates/poddisruptionbudget.yaml
+
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: istio-sidecar-injector
+  namespace: istio-system
+  labels:
+    app: sidecarInjectorWebhook
+    release: istio
+    istio: sidecar-injector
+spec:
+
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: sidecarInjectorWebhook
+      release: istio
+      istio: sidecar-injector
+---
 # Source: istio/charts/galley/templates/configmap.yaml
 apiVersion: v1
 kind: ConfigMap
@@ -1707,7 +967,6 @@ data:
     kind: ValidatingWebhookConfiguration
     metadata:
       name: istio-galley
-      namespace: istio-system
       labels:
         app: galley
         chart: galley
@@ -1768,6 +1027,7 @@ data:
             - sidecars
             - virtualservices
         failurePolicy: Fail
+        sideEffects: None
       - name: mixer.validation.istio.io
         clientConfig:
           service:
@@ -1812,7 +1072,13 @@ data:
             - quotas
             - reportnothings
             - tracespans
+            - adapters
+            - handlers
+            - instances
+            - templates
+            - zipkins
         failurePolicy: Fail
+        sideEffects: None
 ---
 # Source: istio/charts/istiocoredns/templates/configmap.yaml
 apiVersion: v1
@@ -1893,38 +1159,6 @@ data:
       - source_labels: [__meta_kubernetes_pod_name]
         action: replace
         target_label: pod_name
-
-      metric_relabel_configs:
-      # Exclude some of the envoy metrics that have massive cardinality
-      # This list may need to be pruned further moving forward, as informed
-      # by performance and scalability testing.
-      - source_labels: [ cluster_name ]
-        regex: '(outbound|inbound|prometheus_stats).*'
-        action: drop
-      - source_labels: [ tcp_prefix ]
-        regex: '(outbound|inbound|prometheus_stats).*'
-        action: drop
-      - source_labels: [ listener_address ]
-        regex: '(.+)'
-        action: drop
-      - source_labels: [ http_conn_manager_listener_prefix ]
-        regex: '(.+)'
-        action: drop
-      - source_labels: [ http_conn_manager_prefix ]
-        regex: '(.+)'
-        action: drop
-      - source_labels: [ __name__ ]
-        regex: 'envoy_tls.*'
-        action: drop
-      - source_labels: [ __name__ ]
-        regex: 'envoy_tcp_downstream.*'
-        action: drop
-      - source_labels: [ __name__ ]
-        regex: 'envoy_http_(stats|admin).*'
-        action: drop
-      - source_labels: [ __name__ ]
-        regex: 'envoy_cluster_(lb|retry|bind|internal|max|original).*'
-        action: drop
 
     - job_name: 'istio-policy'
       kubernetes_sd_configs:
@@ -2157,18 +1391,18 @@ data:
         target_label: pod_name
 ---
 # Source: istio/charts/security/templates/configmap.yaml
-apiVersion: v1	
-kind: ConfigMap	
-metadata:	
-  name: istio-security-custom-resources	
-  namespace: istio-system	
-  labels:	
-    app: security	
-    chart: security	
-    heritage: Tiller	
-    release: istio	
-    istio: citadel	
-data:	
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: istio-security-custom-resources
+  namespace: istio-system
+  labels:
+    app: security
+    chart: security
+    heritage: Tiller
+    release: istio
+    istio: citadel
+data:
   custom-resources.yaml: |-    
     # Authentication policy to enable permissive mode for all services (that have sidecar) in the mesh.
     apiVersion: "authentication.istio.io/v1alpha1"
@@ -2183,7 +1417,7 @@ data:
     spec:
       peers:
       - mtls:
-          mode: PERMISSIVE	
+          mode: PERMISSIVE
   run.sh: |-    
     #!/bin/sh
     
@@ -2263,7 +1497,7 @@ data:
     connectTimeout: 10s
     
     # DNS refresh rate for Envoy clusters of type STRICT_DNS
-    dnsRefreshRate: 5s
+    dnsRefreshRate: 300s
 
     # Unix Domain Socket through which envoy communicates with NodeAgent SDS to get
     # key/cert for mTLS. Use secret-mount files instead of SDS if set to empty. 
@@ -2379,34 +1613,53 @@ metadata:
     release: istio
     istio: sidecar-injector
 data:
+  values: |-
+    {"certmanager":{"enabled":false},"galley":{"enabled":true,"global":{"arch":{"amd64":2,"ppc64le":2,"s390x":2},"configValidation":true,"controlPlaneSecurityEnabled":true,"defaultNodeSelector":{},"defaultPodDisruptionBudget":{"enabled":true},"defaultResources":{"requests":{"cpu":"0m","memory":"0Mi"}},"defaultTolerations":[],"disablePolicyChecks":true,"enableHelmTest":false,"enableTracing":true,"hub":"docker.io/istio","imagePullPolicy":"IfNotPresent","imagePullSecrets":null,"k8sIngress":{"enableHttps":false,"enabled":false,"gatewayName":"ingressgateway"},"localityLbSetting":{},"logging":{"level":"default:info"},"meshExpansion":{"enabled":false,"useILB":false},"meshNetworks":{},"monitoringPort":15014,"mtls":{"enabled":false},"multiCluster":{"enabled":true},"oneNamespace":false,"outboundTrafficPolicy":{"mode":"ALLOW_ANY"},"podDNSSearchNamespaces":["global"],"policyCheckFailOpen":false,"priorityClassName":"","proxy":{"accessLogEncoding":"TEXT","accessLogFile":"","accessLogFormat":"","autoInject":"enabled","clusterDomain":"cluster.local","componentLogLevel":"","concurrency":2,"dnsRefreshRate":"300s","enableCoreDump":false,"envoyMetricsService":{"enabled":false},"envoyStatsd":{"enabled":false},"excludeIPRanges":"","excludeInboundPorts":"","excludeOutboundPorts":"","image":"proxyv2","includeIPRanges":"*","includeInboundPorts":"*","kubevirtInterfaces":"","logLevel":"","privileged":false,"readinessFailureThreshold":30,"readinessInitialDelaySeconds":1,"readinessPeriodSeconds":2,"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"0m","memory":"0Mi"}},"statusPort":15020,"tracer":"zipkin"},"proxy_init":{"image":"proxy_init"},"sds":{"enabled":false,"udsPath":"","useNormalJwt":false,"useTrustworthyJwt":false},"tag":"1.2.6","tracer":{"datadog":{"address":"$(HOST_IP):8126"},"lightstep":{"accessToken":"","address":"","cacertPath":"","secure":true},"zipkin":{"address":""}},"trustDomain":"","useMCP":true},"image":"galley","nodeSelector":{},"podAntiAffinityLabelSelector":[],"podAntiAffinityTermLabelSelector":[],"replicaCount":1,"tolerations":[]},"gateways":{"enabled":true,"global":{"arch":{"amd64":2,"ppc64le":2,"s390x":2},"configValidation":true,"controlPlaneSecurityEnabled":true,"defaultNodeSelector":{},"defaultPodDisruptionBudget":{"enabled":true},"defaultResources":{"requests":{"cpu":"0m","memory":"0Mi"}},"defaultTolerations":[],"disablePolicyChecks":true,"enableHelmTest":false,"enableTracing":true,"hub":"docker.io/istio","imagePullPolicy":"IfNotPresent","imagePullSecrets":null,"k8sIngress":{"enableHttps":false,"enabled":false,"gatewayName":"ingressgateway"},"localityLbSetting":{},"logging":{"level":"default:info"},"meshExpansion":{"enabled":false,"useILB":false},"meshNetworks":{},"monitoringPort":15014,"mtls":{"enabled":false},"multiCluster":{"enabled":true},"oneNamespace":false,"outboundTrafficPolicy":{"mode":"ALLOW_ANY"},"podDNSSearchNamespaces":["global"],"policyCheckFailOpen":false,"priorityClassName":"","proxy":{"accessLogEncoding":"TEXT","accessLogFile":"","accessLogFormat":"","autoInject":"enabled","clusterDomain":"cluster.local","componentLogLevel":"","concurrency":2,"dnsRefreshRate":"300s","enableCoreDump":false,"envoyMetricsService":{"enabled":false},"envoyStatsd":{"enabled":false},"excludeIPRanges":"","excludeInboundPorts":"","excludeOutboundPorts":"","image":"proxyv2","includeIPRanges":"*","includeInboundPorts":"*","kubevirtInterfaces":"","logLevel":"","privileged":false,"readinessFailureThreshold":30,"readinessInitialDelaySeconds":1,"readinessPeriodSeconds":2,"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"0m","memory":"0Mi"}},"statusPort":15020,"tracer":"zipkin"},"proxy_init":{"image":"proxy_init"},"sds":{"enabled":false,"udsPath":"","useNormalJwt":false,"useTrustworthyJwt":false},"tag":"1.2.6","tracer":{"datadog":{"address":"$(HOST_IP):8126"},"lightstep":{"accessToken":"","address":"","cacertPath":"","secure":true},"zipkin":{"address":""}},"trustDomain":"","useMCP":true},"istio-egressgateway":{"autoscaleEnabled":true,"autoscaleMax":5,"autoscaleMin":1,"cpu":{"targetAverageUtilization":80},"enabled":true,"env":{"ISTIO_META_REQUESTED_NETWORK_VIEW":"external","ISTIO_META_ROUTER_MODE":"sni-dnat"},"labels":{"app":"istio-egressgateway","istio":"egressgateway"},"nodeSelector":{},"podAnnotations":{},"podAntiAffinityLabelSelector":[],"podAntiAffinityTermLabelSelector":[],"ports":[{"name":"http2","port":80},{"name":"https","port":443},{"name":"tls","port":15443,"targetPort":15443}],"resources":{"limits":{"cpu":"2000m","memory":"256Mi"},"requests":{"cpu":"100m","memory":"128Mi"}},"secretVolumes":[{"mountPath":"/etc/istio/egressgateway-certs","name":"egressgateway-certs","secretName":"istio-egressgateway-certs"},{"mountPath":"/etc/istio/egressgateway-ca-certs","name":"egressgateway-ca-certs","secretName":"istio-egressgateway-ca-certs"}],"serviceAnnotations":{},"tolerations":[],"type":"ClusterIP"},"istio-ilbgateway":{"autoscaleEnabled":true,"autoscaleMax":5,"autoscaleMin":1,"cpu":{"targetAverageUtilization":80},"enabled":false,"labels":{"app":"istio-ilbgateway","istio":"ilbgateway"},"loadBalancerIP":"","nodeSelector":{},"podAnnotations":{},"ports":[{"name":"grpc-pilot-mtls","port":15011},{"name":"grpc-pilot","port":15010},{"name":"tcp-citadel-grpc-tls","port":8060,"targetPort":8060},{"name":"tcp-dns","port":5353}],"resources":{"requests":{"cpu":"800m","memory":"512Mi"}},"secretVolumes":[{"mountPath":"/etc/istio/ilbgateway-certs","name":"ilbgateway-certs","secretName":"istio-ilbgateway-certs"},{"mountPath":"/etc/istio/ilbgateway-ca-certs","name":"ilbgateway-ca-certs","secretName":"istio-ilbgateway-ca-certs"}],"serviceAnnotations":{"cloud.google.com/load-balancer-type":"internal"},"tolerations":[],"type":"LoadBalancer"},"istio-ingressgateway":{"applicationPorts":"","autoscaleEnabled":true,"autoscaleMax":5,"autoscaleMin":1,"cpu":{"targetAverageUtilization":80},"enabled":true,"env":{"ISTIO_META_ROUTER_MODE":"sni-dnat"},"externalIPs":[],"labels":{"app":"istio-ingressgateway","istio":"ingressgateway"},"loadBalancerIP":"","loadBalancerSourceRanges":[],"meshExpansionPorts":[{"name":"tcp-pilot-grpc-tls","port":15011,"targetPort":15011},{"name":"tcp-mixer-grpc-tls","port":15004,"targetPort":15004},{"name":"tcp-citadel-grpc-tls","port":8060,"targetPort":8060},{"name":"tcp-dns-tls","port":853,"targetPort":853}],"nodeSelector":{},"podAnnotations":{},"podAntiAffinityLabelSelector":[],"podAntiAffinityTermLabelSelector":[],"ports":[{"name":"status-port","port":15020,"targetPort":15020},{"name":"http2","nodePort":31380,"port":80,"targetPort":80},{"name":"https","nodePort":31390,"port":443},{"name":"tcp","nodePort":31400,"port":31400},{"name":"https-kiali","port":15029,"targetPort":15029},{"name":"https-prometheus","port":15030,"targetPort":15030},{"name":"https-grafana","port":15031,"targetPort":15031},{"name":"https-tracing","port":15032,"targetPort":15032},{"name":"tls","port":15443,"targetPort":15443}],"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"100m","memory":"128Mi"}},"sds":{"enabled":false,"image":"node-agent-k8s","resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"100m","memory":"128Mi"}}},"secretVolumes":[{"mountPath":"/etc/istio/ingressgateway-certs","name":"ingressgateway-certs","secretName":"istio-ingressgateway-certs"},{"mountPath":"/etc/istio/ingressgateway-ca-certs","name":"ingressgateway-ca-certs","secretName":"istio-ingressgateway-ca-certs"}],"serviceAnnotations":{"service.beta.kubernetes.io/aws-load-balancer-type":"nlb"},"tolerations":[],"type":"LoadBalancer"}},"global":{"arch":{"amd64":2,"ppc64le":2,"s390x":2},"configValidation":true,"controlPlaneSecurityEnabled":true,"defaultNodeSelector":{},"defaultPodDisruptionBudget":{"enabled":true},"defaultResources":{"requests":{"cpu":"0m","memory":"0Mi"}},"defaultTolerations":[],"disablePolicyChecks":true,"enableHelmTest":false,"enableTracing":true,"hub":"docker.io/istio","imagePullPolicy":"IfNotPresent","k8sIngress":{"enableHttps":false,"enabled":false,"gatewayName":"ingressgateway"},"localityLbSetting":{},"logging":{"level":"default:info"},"meshExpansion":{"enabled":false,"useILB":false},"meshNetworks":{},"monitoringPort":15014,"mtls":{"enabled":false},"multiCluster":{"enabled":true},"oneNamespace":false,"outboundTrafficPolicy":{"mode":"ALLOW_ANY"},"podDNSSearchNamespaces":["global"],"policyCheckFailOpen":false,"priorityClassName":"","proxy":{"accessLogEncoding":"TEXT","accessLogFile":"","accessLogFormat":"","autoInject":"enabled","clusterDomain":"cluster.local","componentLogLevel":"","concurrency":2,"dnsRefreshRate":"300s","enableCoreDump":false,"envoyMetricsService":{"enabled":false},"envoyStatsd":{"enabled":false},"excludeIPRanges":"","excludeInboundPorts":"","excludeOutboundPorts":"","image":"proxyv2","includeIPRanges":"*","includeInboundPorts":"*","kubevirtInterfaces":"","logLevel":"","privileged":false,"readinessFailureThreshold":30,"readinessInitialDelaySeconds":1,"readinessPeriodSeconds":2,"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"0m","memory":"0Mi"}},"statusPort":15020,"tracer":"zipkin"},"proxy_init":{"image":"proxy_init"},"sds":{"enabled":false,"udsPath":"","useNormalJwt":false,"useTrustworthyJwt":false},"tag":"1.2.6","tracer":{"datadog":{"address":"$(HOST_IP):8126"},"lightstep":{"accessToken":"","address":"","cacertPath":"","secure":true},"zipkin":{"address":""}},"trustDomain":"","useMCP":true},"grafana":{"enabled":false},"istio_cni":{"enabled":false},"istiocoredns":{"coreDNSImage":"coredns/coredns:1.1.2","coreDNSPluginImage":"istio/coredns-plugin:0.2-istio-1.1","enabled":true,"global":{"arch":{"amd64":2,"ppc64le":2,"s390x":2},"configValidation":true,"controlPlaneSecurityEnabled":true,"defaultNodeSelector":{},"defaultPodDisruptionBudget":{"enabled":true},"defaultResources":{"requests":{"cpu":"0m","memory":"0Mi"}},"defaultTolerations":[],"disablePolicyChecks":true,"enableHelmTest":false,"enableTracing":true,"hub":"docker.io/istio","imagePullPolicy":"IfNotPresent","imagePullSecrets":null,"k8sIngress":{"enableHttps":false,"enabled":false,"gatewayName":"ingressgateway"},"localityLbSetting":{},"logging":{"level":"default:info"},"meshExpansion":{"enabled":false,"useILB":false},"meshNetworks":{},"monitoringPort":15014,"mtls":{"enabled":false},"multiCluster":{"enabled":true},"oneNamespace":false,"outboundTrafficPolicy":{"mode":"ALLOW_ANY"},"podDNSSearchNamespaces":["global"],"policyCheckFailOpen":false,"priorityClassName":"","proxy":{"accessLogEncoding":"TEXT","accessLogFile":"","accessLogFormat":"","autoInject":"enabled","clusterDomain":"cluster.local","componentLogLevel":"","concurrency":2,"dnsRefreshRate":"300s","enableCoreDump":false,"envoyMetricsService":{"enabled":false},"envoyStatsd":{"enabled":false},"excludeIPRanges":"","excludeInboundPorts":"","excludeOutboundPorts":"","image":"proxyv2","includeIPRanges":"*","includeInboundPorts":"*","kubevirtInterfaces":"","logLevel":"","privileged":false,"readinessFailureThreshold":30,"readinessInitialDelaySeconds":1,"readinessPeriodSeconds":2,"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"0m","memory":"0Mi"}},"statusPort":15020,"tracer":"zipkin"},"proxy_init":{"image":"proxy_init"},"sds":{"enabled":false,"udsPath":"","useNormalJwt":false,"useTrustworthyJwt":false},"tag":"1.2.6","tracer":{"datadog":{"address":"$(HOST_IP):8126"},"lightstep":{"accessToken":"","address":"","cacertPath":"","secure":true},"zipkin":{"address":""}},"trustDomain":"","useMCP":true},"nodeSelector":{},"podAntiAffinityLabelSelector":[],"podAntiAffinityTermLabelSelector":[],"replicaCount":1,"tolerations":[]},"kiali":{"enabled":false},"mixer":{"adapters":{"kubernetesenv":{"enabled":true},"prometheus":{"enabled":true,"metricsExpiryDuration":"10m"},"stdio":{"enabled":false,"outputAsJson":true},"useAdapterCRDs":false},"env":{"GODEBUG":"gctrace=1","GOMAXPROCS":"6"},"global":{"arch":{"amd64":2,"ppc64le":2,"s390x":2},"configValidation":true,"controlPlaneSecurityEnabled":true,"defaultNodeSelector":{},"defaultPodDisruptionBudget":{"enabled":true},"defaultResources":{"requests":{"cpu":"0m","memory":"0Mi"}},"defaultTolerations":[],"disablePolicyChecks":true,"enableHelmTest":false,"enableTracing":true,"hub":"docker.io/istio","imagePullPolicy":"IfNotPresent","imagePullSecrets":null,"k8sIngress":{"enableHttps":false,"enabled":false,"gatewayName":"ingressgateway"},"localityLbSetting":{},"logging":{"level":"default:info"},"meshExpansion":{"enabled":false,"useILB":false},"meshNetworks":{},"monitoringPort":15014,"mtls":{"enabled":false},"multiCluster":{"enabled":true},"oneNamespace":false,"outboundTrafficPolicy":{"mode":"ALLOW_ANY"},"podDNSSearchNamespaces":["global"],"policyCheckFailOpen":false,"priorityClassName":"","proxy":{"accessLogEncoding":"TEXT","accessLogFile":"","accessLogFormat":"","autoInject":"enabled","clusterDomain":"cluster.local","componentLogLevel":"","concurrency":2,"dnsRefreshRate":"300s","enableCoreDump":false,"envoyMetricsService":{"enabled":false},"envoyStatsd":{"enabled":false},"excludeIPRanges":"","excludeInboundPorts":"","excludeOutboundPorts":"","image":"proxyv2","includeIPRanges":"*","includeInboundPorts":"*","kubevirtInterfaces":"","logLevel":"","privileged":false,"readinessFailureThreshold":30,"readinessInitialDelaySeconds":1,"readinessPeriodSeconds":2,"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"0m","memory":"0Mi"}},"statusPort":15020,"tracer":"zipkin"},"proxy_init":{"image":"proxy_init"},"sds":{"enabled":false,"udsPath":"","useNormalJwt":false,"useTrustworthyJwt":false},"tag":"1.2.6","tracer":{"datadog":{"address":"$(HOST_IP):8126"},"lightstep":{"accessToken":"","address":"","cacertPath":"","secure":true},"zipkin":{"address":""}},"trustDomain":"","useMCP":true},"image":"mixer","nodeSelector":{},"podAnnotations":{},"podAntiAffinityLabelSelector":[],"podAntiAffinityTermLabelSelector":[],"policy":{"autoscaleEnabled":true,"autoscaleMax":5,"autoscaleMin":1,"cpu":{"targetAverageUtilization":80},"enabled":true,"replicaCount":1},"telemetry":{"autoscaleEnabled":true,"autoscaleMax":5,"autoscaleMin":1,"cpu":{"targetAverageUtilization":80},"enabled":true,"loadshedding":{"latencyThreshold":"100ms","mode":"enforce"},"replicaCount":1,"resources":{"limits":{"cpu":"4800m","memory":"4G"},"requests":{"cpu":"1000m","memory":"1G"}},"sessionAffinityEnabled":false},"templates":{"useTemplateCRDs":false},"tolerations":[]},"nodeagent":{"enabled":false},"pilot":{"autoscaleEnabled":true,"autoscaleMax":5,"autoscaleMin":1,"cpu":{"targetAverageUtilization":80},"enabled":true,"env":{"GODEBUG":"gctrace=1","PILOT_PUSH_THROTTLE":100},"global":{"arch":{"amd64":2,"ppc64le":2,"s390x":2},"configValidation":true,"controlPlaneSecurityEnabled":true,"defaultNodeSelector":{},"defaultPodDisruptionBudget":{"enabled":true},"defaultResources":{"requests":{"cpu":"0m","memory":"0Mi"}},"defaultTolerations":[],"disablePolicyChecks":true,"enableHelmTest":false,"enableTracing":true,"hub":"docker.io/istio","imagePullPolicy":"IfNotPresent","imagePullSecrets":null,"k8sIngress":{"enableHttps":false,"enabled":false,"gatewayName":"ingressgateway"},"localityLbSetting":{},"logging":{"level":"default:info"},"meshExpansion":{"enabled":false,"useILB":false},"meshNetworks":{},"monitoringPort":15014,"mtls":{"enabled":false},"multiCluster":{"enabled":true},"oneNamespace":false,"outboundTrafficPolicy":{"mode":"ALLOW_ANY"},"podDNSSearchNamespaces":["global"],"policyCheckFailOpen":false,"priorityClassName":"","proxy":{"accessLogEncoding":"TEXT","accessLogFile":"","accessLogFormat":"","autoInject":"enabled","clusterDomain":"cluster.local","componentLogLevel":"","concurrency":2,"dnsRefreshRate":"300s","enableCoreDump":false,"envoyMetricsService":{"enabled":false},"envoyStatsd":{"enabled":false},"excludeIPRanges":"","excludeInboundPorts":"","excludeOutboundPorts":"","image":"proxyv2","includeIPRanges":"*","includeInboundPorts":"*","kubevirtInterfaces":"","logLevel":"","privileged":false,"readinessFailureThreshold":30,"readinessInitialDelaySeconds":1,"readinessPeriodSeconds":2,"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"0m","memory":"0Mi"}},"statusPort":15020,"tracer":"zipkin"},"proxy_init":{"image":"proxy_init"},"sds":{"enabled":false,"udsPath":"","useNormalJwt":false,"useTrustworthyJwt":false},"tag":"1.2.6","tracer":{"datadog":{"address":"$(HOST_IP):8126"},"lightstep":{"accessToken":"","address":"","cacertPath":"","secure":true},"zipkin":{"address":""}},"trustDomain":"","useMCP":true},"image":"pilot","keepaliveMaxServerConnectionAge":"30m","nodeSelector":{},"podAntiAffinityLabelSelector":[],"podAntiAffinityTermLabelSelector":[],"resources":{"requests":{"cpu":"500m","memory":"2048Mi"}},"sidecar":true,"tolerations":[],"traceSampling":1},"prometheus":{"contextPath":"/prometheus","enabled":true,"global":{"arch":{"amd64":2,"ppc64le":2,"s390x":2},"configValidation":true,"controlPlaneSecurityEnabled":true,"defaultNodeSelector":{},"defaultPodDisruptionBudget":{"enabled":true},"defaultResources":{"requests":{"cpu":"0m","memory":"0Mi"}},"defaultTolerations":[],"disablePolicyChecks":true,"enableHelmTest":false,"enableTracing":true,"hub":"docker.io/istio","imagePullPolicy":"IfNotPresent","imagePullSecrets":null,"k8sIngress":{"enableHttps":false,"enabled":false,"gatewayName":"ingressgateway"},"localityLbSetting":{},"logging":{"level":"default:info"},"meshExpansion":{"enabled":false,"useILB":false},"meshNetworks":{},"monitoringPort":15014,"mtls":{"enabled":false},"multiCluster":{"enabled":true},"oneNamespace":false,"outboundTrafficPolicy":{"mode":"ALLOW_ANY"},"podDNSSearchNamespaces":["global"],"policyCheckFailOpen":false,"priorityClassName":"","proxy":{"accessLogEncoding":"TEXT","accessLogFile":"","accessLogFormat":"","autoInject":"enabled","clusterDomain":"cluster.local","componentLogLevel":"","concurrency":2,"dnsRefreshRate":"300s","enableCoreDump":false,"envoyMetricsService":{"enabled":false},"envoyStatsd":{"enabled":false},"excludeIPRanges":"","excludeInboundPorts":"","excludeOutboundPorts":"","image":"proxyv2","includeIPRanges":"*","includeInboundPorts":"*","kubevirtInterfaces":"","logLevel":"","privileged":false,"readinessFailureThreshold":30,"readinessInitialDelaySeconds":1,"readinessPeriodSeconds":2,"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"0m","memory":"0Mi"}},"statusPort":15020,"tracer":"zipkin"},"proxy_init":{"image":"proxy_init"},"sds":{"enabled":false,"udsPath":"","useNormalJwt":false,"useTrustworthyJwt":false},"tag":"1.2.6","tracer":{"datadog":{"address":"$(HOST_IP):8126"},"lightstep":{"accessToken":"","address":"","cacertPath":"","secure":true},"zipkin":{"address":""}},"trustDomain":"","useMCP":true},"hub":"docker.io/prom","ingress":{"enabled":false,"hosts":["prometheus.local"]},"nodeSelector":{},"podAntiAffinityLabelSelector":[],"podAntiAffinityTermLabelSelector":[],"replicaCount":1,"retention":"6h","scrapeInterval":"15s","security":{"enabled":true},"service":{"annotations":{},"nodePort":{"enabled":false,"port":32090}},"tag":"v2.8.0","tolerations":[]},"security":{"citadelHealthCheck":false,"createMeshPolicy":true,"enabled":true,"global":{"arch":{"amd64":2,"ppc64le":2,"s390x":2},"configValidation":true,"controlPlaneSecurityEnabled":true,"defaultNodeSelector":{},"defaultPodDisruptionBudget":{"enabled":true},"defaultResources":{"requests":{"cpu":"0m","memory":"0Mi"}},"defaultTolerations":[],"disablePolicyChecks":true,"enableHelmTest":false,"enableTracing":true,"hub":"docker.io/istio","imagePullPolicy":"IfNotPresent","imagePullSecrets":null,"k8sIngress":{"enableHttps":false,"enabled":false,"gatewayName":"ingressgateway"},"localityLbSetting":{},"logging":{"level":"default:info"},"meshExpansion":{"enabled":false,"useILB":false},"meshNetworks":{},"monitoringPort":15014,"mtls":{"enabled":false},"multiCluster":{"enabled":true},"oneNamespace":false,"outboundTrafficPolicy":{"mode":"ALLOW_ANY"},"podDNSSearchNamespaces":["global"],"policyCheckFailOpen":false,"priorityClassName":"","proxy":{"accessLogEncoding":"TEXT","accessLogFile":"","accessLogFormat":"","autoInject":"enabled","clusterDomain":"cluster.local","componentLogLevel":"","concurrency":2,"dnsRefreshRate":"300s","enableCoreDump":false,"envoyMetricsService":{"enabled":false},"envoyStatsd":{"enabled":false},"excludeIPRanges":"","excludeInboundPorts":"","excludeOutboundPorts":"","image":"proxyv2","includeIPRanges":"*","includeInboundPorts":"*","kubevirtInterfaces":"","logLevel":"","privileged":false,"readinessFailureThreshold":30,"readinessInitialDelaySeconds":1,"readinessPeriodSeconds":2,"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"0m","memory":"0Mi"}},"statusPort":15020,"tracer":"zipkin"},"proxy_init":{"image":"proxy_init"},"sds":{"enabled":false,"udsPath":"","useNormalJwt":false,"useTrustworthyJwt":false},"tag":"1.2.6","tracer":{"datadog":{"address":"$(HOST_IP):8126"},"lightstep":{"accessToken":"","address":"","cacertPath":"","secure":true},"zipkin":{"address":""}},"trustDomain":"","useMCP":true},"image":"citadel","nodeSelector":{},"podAntiAffinityLabelSelector":[],"podAntiAffinityTermLabelSelector":[],"replicaCount":1,"selfSigned":false,"tolerations":[],"workloadCertTtl":"2160h"},"sidecarInjectorWebhook":{"alwaysInjectSelector":[],"enableNamespacesByDefault":false,"enabled":true,"global":{"arch":{"amd64":2,"ppc64le":2,"s390x":2},"configValidation":true,"controlPlaneSecurityEnabled":true,"defaultNodeSelector":{},"defaultPodDisruptionBudget":{"enabled":true},"defaultResources":{"requests":{"cpu":"0m","memory":"0Mi"}},"defaultTolerations":[],"disablePolicyChecks":true,"enableHelmTest":false,"enableTracing":true,"hub":"docker.io/istio","imagePullPolicy":"IfNotPresent","imagePullSecrets":null,"k8sIngress":{"enableHttps":false,"enabled":false,"gatewayName":"ingressgateway"},"localityLbSetting":{},"logging":{"level":"default:info"},"meshExpansion":{"enabled":false,"useILB":false},"meshNetworks":{},"monitoringPort":15014,"mtls":{"enabled":false},"multiCluster":{"enabled":true},"oneNamespace":false,"outboundTrafficPolicy":{"mode":"ALLOW_ANY"},"podDNSSearchNamespaces":["global"],"policyCheckFailOpen":false,"priorityClassName":"","proxy":{"accessLogEncoding":"TEXT","accessLogFile":"","accessLogFormat":"","autoInject":"enabled","clusterDomain":"cluster.local","componentLogLevel":"","concurrency":2,"dnsRefreshRate":"300s","enableCoreDump":false,"envoyMetricsService":{"enabled":false},"envoyStatsd":{"enabled":false},"excludeIPRanges":"","excludeInboundPorts":"","excludeOutboundPorts":"","image":"proxyv2","includeIPRanges":"*","includeInboundPorts":"*","kubevirtInterfaces":"","logLevel":"","privileged":false,"readinessFailureThreshold":30,"readinessInitialDelaySeconds":1,"readinessPeriodSeconds":2,"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"0m","memory":"0Mi"}},"statusPort":15020,"tracer":"zipkin"},"proxy_init":{"image":"proxy_init"},"sds":{"enabled":false,"udsPath":"","useNormalJwt":false,"useTrustworthyJwt":false},"tag":"1.2.6","tracer":{"datadog":{"address":"$(HOST_IP):8126"},"lightstep":{"accessToken":"","address":"","cacertPath":"","secure":true},"zipkin":{"address":""}},"trustDomain":"","useMCP":true},"image":"sidecar_injector","neverInjectSelector":[],"nodeSelector":{},"podAntiAffinityLabelSelector":[],"podAntiAffinityTermLabelSelector":[],"replicaCount":1,"rewriteAppHTTPProbe":false,"tolerations":[]},"tracing":{"enabled":false}}
+
   config: |-
     policy: enabled
+    alwaysInjectSelector:
+      []
+      
+    neverInjectSelector:
+      []
+      
     template: |-
-      rewriteAppHTTPProbe: false
+      rewriteAppHTTPProbe: {{ valueOrDefault .Values.sidecarInjectorWebhook.rewriteAppHTTPProbe false }}
+      {{- if or (not .Values.istio_cni.enabled) .Values.global.proxy.enableCoreDump }}
       initContainers:
-      [[ if ne (annotation .ObjectMeta `sidecar.istio.io/interceptionMode` .ProxyConfig.InterceptionMode) "NONE" ]]
+      {{ if ne (annotation .ObjectMeta `sidecar.istio.io/interceptionMode` .ProxyConfig.InterceptionMode) `NONE` }}
+      {{- if not .Values.istio_cni.enabled }}
       - name: istio-init
-        image: "docker.io/istio/proxy_init:1.1.7"
+      {{- if contains "/" .Values.global.proxy_init.image }}
+        image: "{{ .Values.global.proxy_init.image }}"
+      {{- else }}
+        image: "{{ .Values.global.hub }}/{{ .Values.global.proxy_init.image }}:{{ .Values.global.tag }}"
+      {{- end }}
         args:
         - "-p"
-        - [[ .MeshConfig.ProxyListenPort ]]
+        - "15001"
         - "-u"
         - 1337
         - "-m"
-        - [[ annotation .ObjectMeta `sidecar.istio.io/interceptionMode` .ProxyConfig.InterceptionMode ]]
+        - "{{ annotation .ObjectMeta `sidecar.istio.io/interceptionMode` .ProxyConfig.InterceptionMode }}"
         - "-i"
-        - "[[ annotation .ObjectMeta `traffic.sidecar.istio.io/includeOutboundIPRanges`  "*"  ]]"
+        - "{{ annotation .ObjectMeta `traffic.sidecar.istio.io/includeOutboundIPRanges` .Values.global.proxy.includeIPRanges }}"
         - "-x"
-        - "[[ annotation .ObjectMeta `traffic.sidecar.istio.io/excludeOutboundIPRanges`  ""  ]]"
+        - "{{ annotation .ObjectMeta `traffic.sidecar.istio.io/excludeOutboundIPRanges` .Values.global.proxy.excludeIPRanges }}"
         - "-b"
-        - "[[ annotation .ObjectMeta `traffic.sidecar.istio.io/includeInboundPorts` (includeInboundPorts .Spec.Containers) ]]"
+        - "{{ annotation .ObjectMeta `traffic.sidecar.istio.io/includeInboundPorts` (includeInboundPorts .Spec.Containers) }}"
         - "-d"
-        - "[[ excludeInboundPort (annotation .ObjectMeta `status.sidecar.istio.io/port`  15020 ) (annotation .ObjectMeta `traffic.sidecar.istio.io/excludeInboundPorts`  "" ) ]]"
-        [[ if (isset .ObjectMeta.Annotations `traffic.sidecar.istio.io/kubevirtInterfaces`) -]]
+        - "{{ excludeInboundPort (annotation .ObjectMeta `status.sidecar.istio.io/port` .Values.global.proxy.statusPort) (annotation .ObjectMeta `traffic.sidecar.istio.io/excludeInboundPorts` .Values.global.proxy.excludeInboundPorts) }}"
+        {{ if or (isset .ObjectMeta.Annotations `traffic.sidecar.istio.io/excludeOutboundPorts`) (ne .Values.global.proxy.excludeOutboundPorts "") -}}
+        - "-o"
+        - "{{ annotation .ObjectMeta `traffic.sidecar.istio.io/excludeOutboundPorts` .Values.global.proxy.excludeOutboundPorts }}"
+        {{ end -}}
+        {{ if (isset .ObjectMeta.Annotations `traffic.sidecar.istio.io/kubevirtInterfaces`) -}}
         - "-k"
-        - "[[ index .ObjectMeta.Annotations `traffic.sidecar.istio.io/kubevirtInterfaces` ]]"
-        [[ end -]]
-        imagePullPolicy: IfNotPresent
+        - "{{ index .ObjectMeta.Annotations `traffic.sidecar.istio.io/kubevirtInterfaces` }}"
+        {{ end -}}
+        imagePullPolicy: "{{ .Values.global.imagePullPolicy }}"
         resources:
           requests:
             cpu: 10m
@@ -2420,11 +1673,44 @@ data:
           capabilities:
             add:
             - NET_ADMIN
+          {{- if .Values.global.proxy.privileged }}
+          privileged: true
+          {{- end }}
         restartPolicy: Always
-      [[ end -]]
+        env:
+        {{- if contains "*" (annotation .ObjectMeta `traffic.sidecar.istio.io/includeInboundPorts` "") }}
+        - name: INBOUND_CAPTURE_PORT
+          value: 15006
+        {{- end }}
+      {{- end }}
+      {{  end -}}
+      {{- if eq .Values.global.proxy.enableCoreDump true }}
+      - name: enable-core-dump
+        args:
+        - -c
+        - sysctl -w kernel.core_pattern=/var/lib/istio/core.proxy && ulimit -c unlimited
+        command:
+          - /bin/sh
+      {{- if contains "/" .Values.global.proxy_init.image }}
+        image: "{{ .Values.global.proxy_init.image }}"
+      {{- else }}
+        image: "{{ .Values.global.hub }}/{{ .Values.global.proxy_init.image }}:{{ .Values.global.tag }}"
+      {{- end }}
+        imagePullPolicy: IfNotPresent
+        resources: {}
+        securityContext:
+          runAsUser: 0
+          runAsNonRoot: false
+          privileged: true
+      {{ end }}
+      {{- end }}
       containers:
       - name: istio-proxy
-        image: [[ annotation .ObjectMeta `sidecar.istio.io/proxyImage`  "docker.io/istio/proxyv2:1.1.7"  ]]
+      {{- if contains "/" .Values.global.proxy.image }}
+        image: "{{ annotation .ObjectMeta `sidecar.istio.io/proxyImage` .Values.global.proxy.image }}"
+      {{- else }}
+        image: "{{ annotation .ObjectMeta `sidecar.istio.io/proxyImage` .Values.global.hub }}/{{ .Values.global.proxy.image }}:{{ .Values.global.tag }}"
+      {{- end }}
         ports:
         - containerPort: 15090
           protocol: TCP
@@ -2433,41 +1719,73 @@ data:
         - proxy
         - sidecar
         - --domain
-        - $(POD_NAMESPACE).svc.cluster.local
+        - $(POD_NAMESPACE).svc.{{ .Values.global.proxy.clusterDomain }}
         - --configPath
-        - [[ .ProxyConfig.ConfigPath ]]
+        - "{{ .ProxyConfig.ConfigPath }}"
         - --binaryPath
-        - [[ .ProxyConfig.BinaryPath ]]
+        - "{{ .ProxyConfig.BinaryPath }}"
         - --serviceCluster
-        [[ if ne "" (index .ObjectMeta.Labels "app") -]]
-        - [[ index .ObjectMeta.Labels "app" ]].$(POD_NAMESPACE)
-        [[ else -]]
-        - [[ valueOrDefault .DeploymentMeta.Name "istio-proxy" ]].[[ valueOrDefault .DeploymentMeta.Namespace "default" ]]
-        [[ end -]]
+        {{ if ne "" (index .ObjectMeta.Labels "app") -}}
+        - "{{ index .ObjectMeta.Labels `app` }}.$(POD_NAMESPACE)"
+        {{ else -}}
+        - "{{ valueOrDefault .DeploymentMeta.Name `istio-proxy` }}.{{ valueOrDefault .DeploymentMeta.Namespace `default` }}"
+        {{ end -}}
         - --drainDuration
-        - [[ formatDuration .ProxyConfig.DrainDuration ]]
+        - "{{ formatDuration .ProxyConfig.DrainDuration }}"
         - --parentShutdownDuration
-        - [[ formatDuration .ProxyConfig.ParentShutdownDuration ]]
+        - "{{ formatDuration .ProxyConfig.ParentShutdownDuration }}"
         - --discoveryAddress
-        - [[ annotation .ObjectMeta `sidecar.istio.io/discoveryAddress` .ProxyConfig.DiscoveryAddress ]]
+        - "{{ annotation .ObjectMeta `sidecar.istio.io/discoveryAddress` .ProxyConfig.DiscoveryAddress }}"
+      {{- if eq .Values.global.proxy.tracer "lightstep" }}
+        - --lightstepAddress
+        - "{{ .ProxyConfig.GetTracing.GetLightstep.GetAddress }}"
+        - --lightstepAccessToken
+        - "{{ .ProxyConfig.GetTracing.GetLightstep.GetAccessToken }}"
+        - --lightstepSecure={{ .ProxyConfig.GetTracing.GetLightstep.GetSecure }}
+        - --lightstepCacertPath
+        - "{{ .ProxyConfig.GetTracing.GetLightstep.GetCacertPath }}"
+      {{- else if eq .Values.global.proxy.tracer "zipkin" }}
         - --zipkinAddress
-        - [[ .ProxyConfig.GetTracing.GetZipkin.GetAddress ]]
+        - "{{ .ProxyConfig.GetTracing.GetZipkin.GetAddress }}"
+      {{- else if eq .Values.global.proxy.tracer "datadog" }}
+        - --datadogAgentAddress
+        - "{{ .ProxyConfig.GetTracing.GetDatadog.GetAddress }}"
+      {{- end }}
+      {{- if .Values.global.proxy.logLevel }}
+        - --proxyLogLevel={{ .Values.global.proxy.logLevel }}
+      {{- end}}
+      {{- if .Values.global.proxy.componentLogLevel }}
+        - --proxyComponentLogLevel={{ .Values.global.proxy.componentLogLevel }}
+      {{- end}}
+        - --dnsRefreshRate
+        - {{ .Values.global.proxy.dnsRefreshRate }}
         - --connectTimeout
-        - [[ formatDuration .ProxyConfig.ConnectTimeout ]]
+        - "{{ formatDuration .ProxyConfig.ConnectTimeout }}"
+      {{- if .Values.global.proxy.envoyStatsd.enabled }}
+        - --statsdUdpAddress
+        - "{{ .ProxyConfig.StatsdUdpAddress }}"
+      {{- end }}
+      {{- if .Values.global.proxy.envoyMetricsService.enabled }}
+        - --envoyMetricsServiceAddress
+        - "{{ .ProxyConfig.EnvoyMetricsServiceAddress }}"
+      {{- end }}
         - --proxyAdminPort
-        - [[ .ProxyConfig.ProxyAdminPort ]]
-        [[ if gt .ProxyConfig.Concurrency 0 -]]
+        - "{{ .ProxyConfig.ProxyAdminPort }}"
+        {{ if gt .ProxyConfig.Concurrency 0 -}}
         - --concurrency
-        - [[ .ProxyConfig.Concurrency ]]
-        [[ end -]]
+        - "{{ .ProxyConfig.Concurrency }}"
+        {{ end -}}
         - --controlPlaneAuthPolicy
-        - [[ annotation .ObjectMeta `sidecar.istio.io/controlPlaneAuthPolicy` .ProxyConfig.ControlPlaneAuthPolicy ]]
-      [[- if (ne (annotation .ObjectMeta `status.sidecar.istio.io/port`  15020 ) "0") ]]
+        - "{{ annotation .ObjectMeta `sidecar.istio.io/controlPlaneAuthPolicy` .ProxyConfig.ControlPlaneAuthPolicy }}"
+      {{- if (ne (annotation .ObjectMeta "status.sidecar.istio.io/port" .Values.global.proxy.statusPort) "0") }}
         - --statusPort
-        - [[ annotation .ObjectMeta `status.sidecar.istio.io/port`  15020  ]]
+        - "{{ annotation .ObjectMeta `status.sidecar.istio.io/port` .Values.global.proxy.statusPort }}"
         - --applicationPorts
-        - "[[ annotation .ObjectMeta `readiness.status.sidecar.istio.io/applicationPorts` (applicationPorts .Spec.Containers) ]]"
-      [[- end ]]
+        - "{{ annotation .ObjectMeta `readiness.status.sidecar.istio.io/applicationPorts` (applicationPorts .Spec.Containers) }}"
+      {{- end }}
+      {{- if .Values.global.trustDomain }}
+        - --trust-domain={{ .Values.global.trustDomain }}
+      {{- end }}
         env:
         - name: POD_NAME
           valueFrom:
@@ -2481,7 +1799,12 @@ data:
           valueFrom:
             fieldRef:
               fieldPath: status.podIP
-        
+      {{ if eq .Values.global.proxy.tracer "datadog" }}
+        - name: HOST_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
+      {{ end }}
         - name: ISTIO_META_POD_NAME
           valueFrom:
             fieldRef:
@@ -2491,101 +1814,165 @@ data:
             fieldRef:
               fieldPath: metadata.namespace
         - name: ISTIO_META_INTERCEPTION_MODE
-          value: [[ or (index .ObjectMeta.Annotations "sidecar.istio.io/interceptionMode") .ProxyConfig.InterceptionMode.String ]]
-        [[ if .ObjectMeta.Annotations ]]
+          value: "{{ or (index .ObjectMeta.Annotations `sidecar.istio.io/interceptionMode`) .ProxyConfig.InterceptionMode.String }}"
+        - name: ISTIO_META_INCLUDE_INBOUND_PORTS
+          value: "{{ annotation .ObjectMeta `traffic.sidecar.istio.io/includeInboundPorts` (applicationPorts .Spec.Containers) }}"
+        {{- if .Values.global.network }}
+        - name: ISTIO_META_NETWORK
+          value: "{{ .Values.global.network }}"
+        {{- end }}
+        {{ if .ObjectMeta.Annotations }}
         - name: ISTIO_METAJSON_ANNOTATIONS
           value: |
-                 [[ toJSON .ObjectMeta.Annotations ]]
-        [[ end ]]
-        [[ if .ObjectMeta.Labels ]]
+                 {{ toJSON .ObjectMeta.Annotations }}
+        {{ end }}
+        {{ if .ObjectMeta.Labels }}
         - name: ISTIO_METAJSON_LABELS
           value: |
-                 [[ toJSON .ObjectMeta.Labels ]]
-        [[ end ]]
-        [[- if (isset .ObjectMeta.Annotations `sidecar.istio.io/bootstrapOverride`) ]]
+                 {{ toJSON .ObjectMeta.Labels }}
+        {{ end }}
+        {{- if (isset .ObjectMeta.Annotations `sidecar.istio.io/bootstrapOverride`) }}
         - name: ISTIO_BOOTSTRAP_OVERRIDE
           value: "/etc/istio/custom-bootstrap/custom_bootstrap.json"
-        [[- end ]]
-        imagePullPolicy: IfNotPresent
-        [[ if (ne (annotation .ObjectMeta `status.sidecar.istio.io/port`  15020 ) "0") ]]
+        {{- end }}
+        {{- if .Values.global.sds.customTokenDirectory }}
+        - name: ISTIO_META_SDS_TOKEN_PATH
+          value: "{{ .Values.global.sds.customTokenDirectory -}}/sdstoken"
+        {{- end }}
+        imagePullPolicy: {{ .Values.global.imagePullPolicy }}
+        {{ if ne (annotation .ObjectMeta `status.sidecar.istio.io/port` .Values.global.proxy.statusPort) `0` }}
         readinessProbe:
           httpGet:
             path: /healthz/ready
-            port: [[ annotation .ObjectMeta `status.sidecar.istio.io/port`  15020  ]]
-          initialDelaySeconds: [[ annotation .ObjectMeta `readiness.status.sidecar.istio.io/initialDelaySeconds`  1  ]]
-          periodSeconds: [[ annotation .ObjectMeta `readiness.status.sidecar.istio.io/periodSeconds`  2  ]]
-          failureThreshold: [[ annotation .ObjectMeta `readiness.status.sidecar.istio.io/failureThreshold`  30  ]]
-        [[ end -]]securityContext:
+            port: {{ annotation .ObjectMeta `status.sidecar.istio.io/port` .Values.global.proxy.statusPort }}
+          initialDelaySeconds: {{ annotation .ObjectMeta `readiness.status.sidecar.istio.io/initialDelaySeconds` .Values.global.proxy.readinessInitialDelaySeconds }}
+          periodSeconds: {{ annotation .ObjectMeta `readiness.status.sidecar.istio.io/periodSeconds` .Values.global.proxy.readinessPeriodSeconds }}
+          failureThreshold: {{ annotation .ObjectMeta `readiness.status.sidecar.istio.io/failureThreshold` .Values.global.proxy.readinessFailureThreshold }}
+        {{ end -}}
+        securityContext:
+          {{- if .Values.global.proxy.privileged }}
+          privileged: true
+          {{- end }}
+          {{- if ne .Values.global.proxy.enableCoreDump true }}
           readOnlyRootFilesystem: true
-          [[ if eq (annotation .ObjectMeta `sidecar.istio.io/interceptionMode` .ProxyConfig.InterceptionMode) "TPROXY" -]]
+          {{- end }}
+          {{ if eq (annotation .ObjectMeta `sidecar.istio.io/interceptionMode` .ProxyConfig.InterceptionMode) `TPROXY` -}}
           capabilities:
             add:
             - NET_ADMIN
           runAsGroup: 1337
-          [[ else -]]
-          
+          {{ else -}}
+          {{ if and .Values.global.sds.enabled .Values.global.sds.useTrustworthyJwt }}
+          runAsGroup: 1337
+          {{- end }}
           runAsUser: 1337
-          [[- end ]]
+          {{- end }}
         resources:
-          [[ if or (isset .ObjectMeta.Annotations `sidecar.istio.io/proxyCPU`) (isset .ObjectMeta.Annotations `sidecar.istio.io/proxyMemory`) -]]
+          {{ if or (isset .ObjectMeta.Annotations `sidecar.istio.io/proxyCPU`) (isset .ObjectMeta.Annotations `sidecar.istio.io/proxyMemory`) -}}
           requests:
-            [[ if (isset .ObjectMeta.Annotations `sidecar.istio.io/proxyCPU`) -]]
-            cpu: "[[ index .ObjectMeta.Annotations `sidecar.istio.io/proxyCPU` ]]"
-            [[ end ]]
-            [[ if (isset .ObjectMeta.Annotations `sidecar.istio.io/proxyMemory`) -]]
-            memory: "[[ index .ObjectMeta.Annotations `sidecar.istio.io/proxyMemory` ]]"
-            [[ end ]]
-        [[ else -]]
-          limits:
-            cpu: 2000m
-            memory: 1024Mi
-          requests:
-            cpu: 0m
-            memory: 0Mi
-          
-        [[ end -]]
+            {{ if (isset .ObjectMeta.Annotations `sidecar.istio.io/proxyCPU`) -}}
+            cpu: "{{ index .ObjectMeta.Annotations `sidecar.istio.io/proxyCPU` }}"
+            {{ end}}
+            {{ if (isset .ObjectMeta.Annotations `sidecar.istio.io/proxyMemory`) -}}
+            memory: "{{ index .ObjectMeta.Annotations `sidecar.istio.io/proxyMemory` }}"
+            {{ end }}
+        {{ else -}}
+      {{- if .Values.global.proxy.resources }}
+          {{ toYaml .Values.global.proxy.resources | indent 4 }}
+      {{- end }}
+        {{  end -}}
         volumeMounts:
-        [[- if (isset .ObjectMeta.Annotations `sidecar.istio.io/bootstrapOverride`) ]]
+        {{ if (isset .ObjectMeta.Annotations `sidecar.istio.io/bootstrapOverride`) }}
         - mountPath: /etc/istio/custom-bootstrap
           name: custom-bootstrap-volume
-        [[- end ]]
+        {{- end }}
         - mountPath: /etc/istio/proxy
           name: istio-envoy
+        {{- if .Values.global.sds.enabled }}
+        - mountPath: /var/run/sds
+          name: sds-uds-path
+          readOnly: true
+        {{- if .Values.global.sds.useTrustworthyJwt }}
+        - mountPath: /var/run/secrets/tokens
+          name: istio-token
+        {{- end }}
+        {{- if .Values.global.sds.customTokenDirectory }}
+        - mountPath: "{{ .Values.global.sds.customTokenDirectory -}}"
+          name: custom-sds-token
+          readOnly: true
+        {{- end }}
+        {{- else }}
         - mountPath: /etc/certs/
           name: istio-certs
           readOnly: true
-          [[- if isset .ObjectMeta.Annotations `sidecar.istio.io/userVolumeMount` ]]
-          [[ range $index, $value := fromJSON (index .ObjectMeta.Annotations `sidecar.istio.io/userVolumeMount`) ]]
-        - name: "[[ $index ]]"
-          [[ toYaml $value | indent 4 ]]
-          [[ end ]]
-          [[- end ]]
+        {{- end }}
+        {{- if and (eq .Values.global.proxy.tracer "lightstep") .Values.global.tracer.lightstep.cacertPath }}
+        - mountPath: {{ directory .ProxyConfig.GetTracing.GetLightstep.GetCacertPath }}
+          name: lightstep-certs
+          readOnly: true
+        {{- end }}
+          {{- if isset .ObjectMeta.Annotations `sidecar.istio.io/userVolumeMount` }}
+          {{ range $index, $value := fromJSON (index .ObjectMeta.Annotations `sidecar.istio.io/userVolumeMount`) }}
+        - name: "{{  $index }}"
+          {{ toYaml $value | indent 4 }}
+          {{ end }}
+          {{- end }}
       volumes:
-      [[- if (isset .ObjectMeta.Annotations `sidecar.istio.io/bootstrapOverride`) ]]
+      {{- if (isset .ObjectMeta.Annotations `sidecar.istio.io/bootstrapOverride`) }}
       - name: custom-bootstrap-volume
         configMap:
-          name: [[ annotation .ObjectMeta `sidecar.istio.io/bootstrapOverride` `` ]]
-      [[- end ]]
+          name: {{ annotation .ObjectMeta `sidecar.istio.io/bootstrapOverride` "" }}
+      {{- end }}
       - emptyDir:
           medium: Memory
         name: istio-envoy
+      {{- if .Values.global.sds.enabled }}
+      - name: sds-uds-path
+        hostPath:
+          path: /var/run/sds
+      {{- if .Values.global.sds.customTokenDirectory }}
+      - name: custom-sds-token
+        secret:
+          secretName: sdstokensecret
+      {{- end }}
+      {{- if .Values.global.sds.useTrustworthyJwt }}
+      - name: istio-token
+        projected:
+          sources:
+          - serviceAccountToken:
+              path: istio-token
+              expirationSeconds: 43200
+              audience: {{ .Values.global.trustDomain }}
+      {{- end }}
+      {{- else }}
       - name: istio-certs
         secret:
           optional: true
-          [[ if eq .Spec.ServiceAccountName "" -]]
+          {{ if eq .Spec.ServiceAccountName "" }}
           secretName: istio.default
-          [[ else -]]
-          secretName: [[ printf "istio.%s" .Spec.ServiceAccountName ]]
-          [[ end -]]
-        [[- if isset .ObjectMeta.Annotations `sidecar.istio.io/userVolume` ]]
-        [[ range $index, $value := fromJSON (index .ObjectMeta.Annotations `sidecar.istio.io/userVolume`) ]]
-      - name: "[[ $index ]]"
-        [[ toYaml $value | indent 2 ]]
-        [[ end ]]
-        [[ end ]]
+          {{ else -}}
+          secretName: {{  printf "istio.%s" .Spec.ServiceAccountName }}
+          {{  end -}}
+        {{- if isset .ObjectMeta.Annotations `sidecar.istio.io/userVolume` }}
+        {{range $index, $value := fromJSON (index .ObjectMeta.Annotations `sidecar.istio.io/userVolume`) }}
+      - name: "{{ $index }}"
+        {{ toYaml $value | indent 2 }}
+        {{ end }}
+        {{ end }}
+      {{- end }}
+      {{- if and (eq .Values.global.proxy.tracer "lightstep") .Values.global.tracer.lightstep.cacertPath }}
+      - name: lightstep-certs
+        secret:
+          optional: true
+          secretName: lightstep.cacert
+      {{- end }}
+      {{- if .Values.global.podDNSSearchNamespaces }}
       dnsConfig:
         searches:
-          - global
+          {{- range .Values.global.podDNSSearchNamespaces }}
+          - {{ render . }}
+          {{- end }}
+      {{- end }}
 
 ---
 # Source: istio/charts/galley/templates/serviceaccount.yaml
@@ -2749,7 +2136,7 @@ subjects:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: istio-cleanup-secrets-1.1.7
+  name: istio-cleanup-secrets-1.2.6
   namespace: istio-system
   annotations:
     "helm.sh/hook": post-delete
@@ -2773,7 +2160,7 @@ spec:
       serviceAccountName: istio-cleanup-secrets-service-account
       containers:
         - name: kubectl
-          image: "docker.io/istio/kubectl:1.1.7"
+          image: "docker.io/istio/kubectl:1.2.6"
           imagePullPolicy: IfNotPresent
           command:
           - /bin/bash
@@ -2822,95 +2209,95 @@ spec:
 ---
 # Source: istio/charts/security/templates/create-custom-resources-job.yaml
 
-apiVersion: v1	
-kind: ServiceAccount	
-metadata:	
-  name: istio-security-post-install-account	
-  namespace: istio-system	
-  labels:	
-    app: security	
-    chart: security	
-    heritage: Tiller	
-    release: istio	
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: istio-security-post-install-account
+  namespace: istio-system
+  labels:
+    app: security
+    chart: security
+    heritage: Tiller
+    release: istio
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1	
-kind: ClusterRole	
-metadata:	
-  name: istio-security-post-install-istio-system	
-  labels:	
-    app: security	
-    chart: security	
-    heritage: Tiller	
-    release: istio	
-rules:	
-- apiGroups: ["authentication.istio.io"] # needed to create default authn policy	
-  resources: ["*"]	
-  verbs: ["*"]	
-- apiGroups: ["networking.istio.io"] # needed to create security destination rules	
-  resources: ["*"]	
-  verbs: ["*"]	
-- apiGroups: ["admissionregistration.k8s.io"]	
-  resources: ["validatingwebhookconfigurations"]	
-  verbs: ["get"]	
-- apiGroups: ["extensions", "apps"]	
-  resources: ["deployments", "replicasets"]	
-  verbs: ["get", "list", "watch"]	
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRole
+metadata:
+  name: istio-security-post-install-istio-system
+  labels:
+    app: security
+    chart: security
+    heritage: Tiller
+    release: istio
+rules:
+- apiGroups: ["authentication.istio.io"] # needed to create default authn policy
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["networking.istio.io"] # needed to create security destination rules
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["admissionregistration.k8s.io"]
+  resources: ["validatingwebhookconfigurations"]
+  verbs: ["get"]
+- apiGroups: ["extensions", "apps"]
+  resources: ["deployments", "replicasets"]
+  verbs: ["get", "list", "watch"]
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1	
-kind: ClusterRoleBinding	
-metadata:	
-  name: istio-security-post-install-role-binding-istio-system	
-  labels:	
-    app: security	
-    chart: security	
-    heritage: Tiller	
-    release: istio	
-roleRef:	
-  apiGroup: rbac.authorization.k8s.io	
-  kind: ClusterRole	
-  name: istio-security-post-install-istio-system	
-subjects:	
-  - kind: ServiceAccount	
-    name: istio-security-post-install-account	
-    namespace: istio-system	
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: istio-security-post-install-role-binding-istio-system
+  labels:
+    app: security
+    chart: security
+    heritage: Tiller
+    release: istio
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: istio-security-post-install-istio-system
+subjects:
+  - kind: ServiceAccount
+    name: istio-security-post-install-account
+    namespace: istio-system
 ---
 apiVersion: batch/v1
-kind: Job	
-metadata:	
-  name: istio-security-post-install-1.1.7	
-  namespace: istio-system	
-  annotations:	
-    "helm.sh/hook": post-install	
-    "helm.sh/hook-delete-policy": hook-succeeded	
-  labels:	
-    app: security	
-    chart: security	
-    heritage: Tiller	
-    release: istio	
-spec:	
-  template:	
-    metadata:	
-      name: istio-security-post-install	
-      labels:	
-        app: security	
-        chart: security	
-        heritage: Tiller	
-        release: istio	
-    spec:	
-      serviceAccountName: istio-security-post-install-account	
-      containers:	
-        - name: kubectl	
-          image: "docker.io/istio/kubectl:1.1.7"	
-          imagePullPolicy: IfNotPresent	
-          command: [ "/bin/bash", "/tmp/security/run.sh", "/tmp/security/custom-resources.yaml" ]	
-          volumeMounts:	
-            - mountPath: "/tmp/security"	
-              name: tmp-configmap-security	
-      volumes:	
-        - name: tmp-configmap-security	
-          configMap:	
-            name: istio-security-custom-resources	
-      restartPolicy: OnFailure	
+kind: Job
+metadata:
+  name: istio-security-post-install-1.2.6
+  namespace: istio-system
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-delete-policy": hook-succeeded
+  labels:
+    app: security
+    chart: security
+    heritage: Tiller
+    release: istio
+spec:
+  template:
+    metadata:
+      name: istio-security-post-install
+      labels:
+        app: security
+        chart: security
+        heritage: Tiller
+        release: istio
+    spec:
+      serviceAccountName: istio-security-post-install-account
+      containers:
+        - name: kubectl
+          image: "docker.io/istio/kubectl:1.2.6"
+          imagePullPolicy: IfNotPresent
+          command: [ "/bin/bash", "/tmp/security/run.sh", "/tmp/security/custom-resources.yaml" ]
+          volumeMounts:
+            - mountPath: "/tmp/security"
+              name: tmp-configmap-security
+      volumes:
+        - name: tmp-configmap-security
+          configMap:
+            name: istio-security-custom-resources
+      restartPolicy: OnFailure
       affinity:      
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -3021,38 +2408,6 @@ rules:
   resources: ["deployments/finalizers"]
   resourceNames: ["istio-galley"]
   verbs: ["update"]
-
----
-# Source: istio/charts/gateways/templates/clusterrole.yaml
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: istio-egressgateway-istio-system
-  labels:
-    app: egressgateway
-    chart: gateways
-    heritage: Tiller
-    release: istio
-rules:
-- apiGroups: ["networking.istio.io"]
-  resources: ["virtualservices", "destinationrules", "gateways"]
-  verbs: ["get", "watch", "list", "update"]
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: istio-ingressgateway-istio-system
-  labels:
-    app: ingressgateway
-    chart: gateways
-    heritage: Tiller
-    release: istio
-rules:
-- apiGroups: ["networking.istio.io"]
-  resources: ["virtualservices", "destinationrules", "gateways"]
-  verbs: ["get", "watch", "list", "update"]
----
 
 ---
 # Source: istio/charts/istiocoredns/templates/clusterrole.yaml
@@ -3240,46 +2595,6 @@ subjects:
     namespace: istio-system
 
 ---
-# Source: istio/charts/gateways/templates/clusterrolebindings.yaml
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: istio-egressgateway-istio-system
-  labels:
-    app: egressgateway
-    chart: gateways
-    heritage: Tiller
-    release: istio
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: istio-egressgateway-istio-system
-subjects:
-- kind: ServiceAccount
-  name: istio-egressgateway-service-account
-  namespace: istio-system
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: istio-ingressgateway-istio-system
-  labels:
-    app: ingressgateway
-    chart: gateways
-    heritage: Tiller
-    release: istio
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: istio-ingressgateway-istio-system
-subjects:
-- kind: ServiceAccount
-  name: istio-ingressgateway-service-account
-  namespace: istio-system
----
-
----
 # Source: istio/charts/istiocoredns/templates/clusterrolebinding.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -3408,7 +2723,7 @@ kind: ClusterRoleBinding
 metadata:
   name: istio-multi
   labels:
-    chart: istio-1.1.0
+    chart: istio-1.2.6
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -3740,7 +3055,7 @@ spec:
 
 ---
 # Source: istio/charts/galley/templates/deployment.yaml
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: istio-galley
@@ -3753,6 +3068,9 @@ metadata:
     istio: galley
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      istio: galley
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -3771,7 +3089,7 @@ spec:
       serviceAccountName: istio-galley-service-account
       containers:
         - name: galley
-          image: "docker.io/istio/galley:1.1.7"
+          image: "docker.io/istio/galley:1.2.6"
           imagePullPolicy: IfNotPresent
           ports:
           - containerPort: 443
@@ -3871,7 +3189,7 @@ spec:
 ---
 # Source: istio/charts/gateways/templates/deployment.yaml
 
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: istio-egressgateway
@@ -3883,6 +3201,10 @@ metadata:
     app: istio-egressgateway
     istio: egressgateway
 spec:
+  selector:
+    matchLabels:
+      app: istio-egressgateway
+      istio: egressgateway
   template:
     metadata:
       labels:
@@ -3897,7 +3219,7 @@ spec:
       serviceAccountName: istio-egressgateway-service-account
       containers:
         - name: istio-proxy
-          image: "docker.io/istio/proxyv2:1.1.7"
+          image: "docker.io/istio/proxyv2:1.2.6"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
@@ -3949,6 +3271,11 @@ spec:
               memory: 128Mi
             
           env:
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.nodeName
           - name: POD_NAME
             valueFrom:
               fieldRef:
@@ -4039,7 +3366,7 @@ spec:
                 values:
                 - s390x      
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: istio-ingressgateway
@@ -4051,6 +3378,10 @@ metadata:
     app: istio-ingressgateway
     istio: ingressgateway
 spec:
+  selector:
+    matchLabels:
+      app: istio-ingressgateway
+      istio: ingressgateway
   template:
     metadata:
       labels:
@@ -4065,7 +3396,7 @@ spec:
       serviceAccountName: istio-ingressgateway-service-account
       containers:
         - name: istio-proxy
-          image: "docker.io/istio/proxyv2:1.1.7"
+          image: "docker.io/istio/proxyv2:1.2.6"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 15020
@@ -4123,6 +3454,11 @@ spec:
               memory: 128Mi
             
           env:
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.nodeName
           - name: POD_NAME
             valueFrom:
               fieldRef:
@@ -4214,7 +3550,7 @@ spec:
 
 ---
 # Source: istio/charts/istiocoredns/templates/deployment.yaml
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: istiocoredns
@@ -4226,6 +3562,9 @@ metadata:
     release: istio
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: istiocoredns
   template:
     metadata:
       name: istiocoredns
@@ -4329,7 +3668,7 @@ spec:
 ---
 # Source: istio/charts/mixer/templates/deployment.yaml
 
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: istio-policy
@@ -4408,7 +3747,7 @@ spec:
                 - s390x      
       containers:
       - name: mixer
-        image: "docker.io/istio/mixer:1.1.7"
+        image: "docker.io/istio/mixer:1.2.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 15014
@@ -4420,8 +3759,9 @@ spec:
           - --log_output_level=default:info
           - --configStoreURL=mcps://istio-galley.istio-system.svc:9901
           - --configDefaultNamespace=istio-system
-          - --useAdapterCRDs=true
-          - --trace_zipkin_url=http://zipkin:9411/api/v1/spans
+          - --useAdapterCRDs=false
+          - --useTemplateCRDs=false
+          - --trace_zipkin_url=http://zipkin.istio-system:9411/api/v1/spans
         env:
         - name: GODEBUG
           value: "gctrace=1"
@@ -4445,7 +3785,7 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 5
       - name: istio-proxy
-        image: "docker.io/istio/proxyv2:1.1.7"
+        image: "docker.io/istio/proxyv2:1.2.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9091
@@ -4498,7 +3838,7 @@ spec:
           readOnly: true
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: istio-telemetry
@@ -4577,7 +3917,7 @@ spec:
                 - s390x      
       containers:
       - name: mixer
-        image: "docker.io/istio/mixer:1.1.7"
+        image: "docker.io/istio/mixer:1.2.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 15014
@@ -4592,8 +3932,9 @@ spec:
           - --keyFile=/etc/certs/key.pem
           - --caCertFile=/etc/certs/root-cert.pem
           - --configDefaultNamespace=istio-system
-          - --useAdapterCRDs=true
-          - --trace_zipkin_url=http://zipkin:9411/api/v1/spans
+          - --useAdapterCRDs=false
+          - --useTemplateCRDs=false
+          - --trace_zipkin_url=http://zipkin.istio-system:9411/api/v1/spans
           - --averageLatencyThreshold
           - 100ms
           - --loadsheddingMode
@@ -4627,7 +3968,7 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 5
       - name: istio-proxy
-        image: "docker.io/istio/proxyv2:1.1.7"
+        image: "docker.io/istio/proxyv2:1.2.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9091
@@ -4680,7 +4021,7 @@ spec:
 
 ---
 # Source: istio/charts/pilot/templates/deployment.yaml
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: istio-pilot
@@ -4716,7 +4057,7 @@ spec:
       serviceAccountName: istio-pilot-service-account
       containers:
         - name: discovery
-          image: "docker.io/istio/pilot:1.1.7"
+          image: "docker.io/istio/pilot:1.2.6"
           imagePullPolicy: IfNotPresent
           args:
           - "discovery"
@@ -4767,7 +4108,7 @@ spec:
             mountPath: /etc/certs
             readOnly: true
         - name: istio-proxy
-          image: "docker.io/istio/proxyv2:1.1.7"
+          image: "docker.io/istio/proxyv2:1.2.6"
           imagePullPolicy: IfNotPresent
           ports:
           - containerPort: 15003
@@ -4857,7 +4198,7 @@ spec:
 ---
 # Source: istio/charts/prometheus/templates/deployment.yaml
 # TODO: the original template has service account, roles, etc
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prometheus
@@ -4885,7 +4226,7 @@ spec:
       serviceAccountName: prometheus
       containers:
         - name: prometheus
-          image: "docker.io/prom/prometheus:v2.3.1"
+          image: "docker.io/prom/prometheus:v2.8.0"
           imagePullPolicy: IfNotPresent
           args:
             - '--storage.tsdb.retention=6h'
@@ -4956,7 +4297,7 @@ spec:
 ---
 # Source: istio/charts/security/templates/deployment.yaml
 # istio CA watching all namespaces
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: istio-citadel
@@ -4969,6 +4310,9 @@ metadata:
     istio: citadel
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      istio: citadel
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -4987,12 +4331,11 @@ spec:
       serviceAccountName: istio-citadel-service-account
       containers:
         - name: citadel
-          image: "docker.io/istio/citadel:1.1.7"
+          image: "docker.io/istio/citadel:1.2.6"
           imagePullPolicy: IfNotPresent
           args:
             - --append-dns-names=true
             - --grpc-port=8060
-            - --grpc-hostname=citadel
             - --citadel-storage-namespace=istio-system
             - --custom-dns-names=istio-pilot-service-account.istio-system:istio-pilot.istio-system
             - --monitoring-port=15014
@@ -5001,12 +4344,7 @@ spec:
             - --signing-key=/etc/cacerts/ca-key.pem
             - --root-cert=/etc/cacerts/root-cert.pem
             - --cert-chain=/etc/cacerts/cert-chain.pem
-          livenessProbe:
-            httpGet:
-              path: /version
-              port: 15014
-            initialDelaySeconds: 5
-            periodSeconds: 5
+            - --workload-cert-ttl=2160h
           resources:
             requests:
               cpu: 0m
@@ -5057,7 +4395,7 @@ spec:
 
 ---
 # Source: istio/charts/sidecarInjectorWebhook/templates/deployment.yaml
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: istio-sidecar-injector
@@ -5070,6 +4408,9 @@ metadata:
     istio: sidecar-injector
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      istio: sidecar-injector
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -5088,7 +4429,7 @@ spec:
       serviceAccountName: istio-sidecar-injector-service-account
       containers:
         - name: sidecar-injector-webhook
-          image: "docker.io/istio/sidecar_injector:1.1.7"
+          image: "docker.io/istio/sidecar_injector:1.2.6"
           imagePullPolicy: IfNotPresent
           args:
             - --caCertFile=/etc/istio/certs/root-cert.pem
@@ -5144,6 +4485,8 @@ spec:
           items:
           - key: config
             path: config
+          - key: values
+            path: values
       affinity:      
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -5193,6 +4536,7 @@ metadata:
     release: istio
 spec:
   selector:
+    app: istio-egressgateway
     istio: egressgateway
   servers:
   - hosts:
@@ -5216,6 +4560,7 @@ metadata:
     release: istio
 spec:
   selector:
+    app: istio-ingressgateway
     istio: ingressgateway
   servers:
   - hosts:
@@ -5238,20 +4583,21 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-   workloadLabels:
-     istio: ingressgateway
-   filters:
-   - listenerMatch:
-       portNumber: 15443
-       listenerType: GATEWAY
-     insertPosition:
-       index: AFTER
-       relativeTo: envoy.filters.network.sni_cluster
-     filterName: envoy.filters.network.tcp_cluster_rewrite
-     filterType: NETWORK
-     filterConfig:
-       cluster_pattern: "\\.global$"
-       cluster_replacement: ".svc.cluster.local"       
+  workloadLabels:
+    app: istio-ingressgateway
+    istio: ingressgateway
+  filters:
+  - listenerMatch:
+      portNumber: 15443
+      listenerType: GATEWAY
+    insertPosition:
+      index: AFTER
+      relativeTo: envoy.filters.network.sni_cluster
+    filterName: envoy.filters.network.tcp_cluster_rewrite
+    filterType: NETWORK
+    filterConfig:
+      cluster_pattern: "\\.global$"
+      cluster_replacement: ".svc.cluster.local"
 ---
 ## To ensure all traffic to *.global is using mTLS
 apiVersion: networking.istio.io/v1alpha3
@@ -5280,15 +4626,16 @@ metadata:
   name: istio-egressgateway
   namespace: istio-system
   labels:
-    app: egressgateway
     chart: gateways
     heritage: Tiller
     release: istio
+    app: istio-egressgateway
+    istio: egressgateway
 spec:
   maxReplicas: 5
   minReplicas: 1
   scaleTargetRef:
-    apiVersion: apps/v1beta1
+    apiVersion: apps/v1
     kind: Deployment
     name: istio-egressgateway
   metrics:
@@ -5303,15 +4650,16 @@ metadata:
   name: istio-ingressgateway
   namespace: istio-system
   labels:
-    app: ingressgateway
     chart: gateways
     heritage: Tiller
     release: istio
+    app: istio-ingressgateway
+    istio: ingressgateway
 spec:
   maxReplicas: 5
   minReplicas: 1
   scaleTargetRef:
-    apiVersion: apps/v1beta1
+    apiVersion: apps/v1
     kind: Deployment
     name: istio-ingressgateway
   metrics:
@@ -5338,7 +4686,7 @@ spec:
     maxReplicas: 5
     minReplicas: 1
     scaleTargetRef:
-      apiVersion: apps/v1beta1
+      apiVersion: apps/v1
       kind: Deployment
       name: istio-policy
     metrics:
@@ -5361,7 +4709,7 @@ spec:
     maxReplicas: 5
     minReplicas: 1
     scaleTargetRef:
-      apiVersion: apps/v1beta1
+      apiVersion: apps/v1
       kind: Deployment
       name: istio-telemetry
     metrics:
@@ -5388,7 +4736,7 @@ spec:
   maxReplicas: 5
   minReplicas: 1
   scaleTargetRef:
-    apiVersion: apps/v1beta1
+    apiVersion: apps/v1
     kind: Deployment
     name: istio-pilot
   metrics:
@@ -5404,7 +4752,6 @@ apiVersion: admissionregistration.k8s.io/v1beta1
 kind: MutatingWebhookConfiguration
 metadata:
   name: istio-sidecar-injector
-  namespace: istio-system
   labels:
     app: sidecarInjectorWebhook
     chart: sidecarInjectorWebhook
@@ -5684,7 +5031,7 @@ spec:
 ---
 ---
 apiVersion: "config.istio.io/v1alpha2"
-kind: metric
+kind: instance
 metadata:
   name: requestcount
   namespace: istio-system
@@ -5694,32 +5041,34 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-  value: "1"
-  dimensions:
-    reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
-    source_workload: source.workload.name | "unknown"
-    source_workload_namespace: source.workload.namespace | "unknown"
-    source_principal: source.principal | "unknown"
-    source_app: source.labels["app"] | "unknown"
-    source_version: source.labels["version"] | "unknown"
-    destination_workload: destination.workload.name | "unknown"
-    destination_workload_namespace: destination.workload.namespace | "unknown"
-    destination_principal: destination.principal | "unknown"
-    destination_app: destination.labels["app"] | "unknown"
-    destination_version: destination.labels["version"] | "unknown"
-    destination_service: destination.service.host | "unknown"
-    destination_service_name: destination.service.name | "unknown"
-    destination_service_namespace: destination.service.namespace | "unknown"
-    request_protocol: api.protocol | context.protocol | "unknown"
-    response_code: response.code | 200
-    response_flags: context.proxy_error_code | "-"
-    permissive_response_code: rbac.permissive.response_code | "none"
-    permissive_response_policyid: rbac.permissive.effective_policy_id | "none"
-    connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
-  monitored_resource_type: '"UNSPECIFIED"'
+  compiledTemplate: metric
+  params:
+    value: "1"
+    dimensions:
+      reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
+      source_workload: source.workload.name | "unknown"
+      source_workload_namespace: source.workload.namespace | "unknown"
+      source_principal: source.principal | "unknown"
+      source_app: source.labels["app"] | "unknown"
+      source_version: source.labels["version"] | "unknown"
+      destination_workload: destination.workload.name | "unknown"
+      destination_workload_namespace: destination.workload.namespace | "unknown"
+      destination_principal: destination.principal | "unknown"
+      destination_app: destination.labels["app"] | "unknown"
+      destination_version: destination.labels["version"] | "unknown"
+      destination_service: destination.service.host | "unknown"
+      destination_service_name: destination.service.name | "unknown"
+      destination_service_namespace: destination.service.namespace | "unknown"
+      request_protocol: api.protocol | context.protocol | "unknown"
+      response_code: response.code | 200
+      response_flags: context.proxy_error_code | "-"
+      permissive_response_code: rbac.permissive.response_code | "none"
+      permissive_response_policyid: rbac.permissive.effective_policy_id | "none"
+      connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
+    monitored_resource_type: '"UNSPECIFIED"'
 ---
 apiVersion: "config.istio.io/v1alpha2"
-kind: metric
+kind: instance
 metadata:
   name: requestduration
   namespace: istio-system
@@ -5729,32 +5078,34 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-  value: response.duration | "0ms"
-  dimensions:
-    reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
-    source_workload: source.workload.name | "unknown"
-    source_workload_namespace: source.workload.namespace | "unknown"
-    source_principal: source.principal | "unknown"
-    source_app: source.labels["app"] | "unknown"
-    source_version: source.labels["version"] | "unknown"
-    destination_workload: destination.workload.name | "unknown"
-    destination_workload_namespace: destination.workload.namespace | "unknown"
-    destination_principal: destination.principal | "unknown"
-    destination_app: destination.labels["app"] | "unknown"
-    destination_version: destination.labels["version"] | "unknown"
-    destination_service: destination.service.host | "unknown"
-    destination_service_name: destination.service.name | "unknown"
-    destination_service_namespace: destination.service.namespace | "unknown"
-    request_protocol: api.protocol | context.protocol | "unknown"
-    response_code: response.code | 200
-    response_flags: context.proxy_error_code | "-"
-    permissive_response_code: rbac.permissive.response_code | "none" 
-    permissive_response_policyid: rbac.permissive.effective_policy_id | "none"
-    connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
-  monitored_resource_type: '"UNSPECIFIED"'
+  compiledTemplate: metric
+  params:
+    value: response.duration | "0ms"
+    dimensions:
+      reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
+      source_workload: source.workload.name | "unknown"
+      source_workload_namespace: source.workload.namespace | "unknown"
+      source_principal: source.principal | "unknown"
+      source_app: source.labels["app"] | "unknown"
+      source_version: source.labels["version"] | "unknown"
+      destination_workload: destination.workload.name | "unknown"
+      destination_workload_namespace: destination.workload.namespace | "unknown"
+      destination_principal: destination.principal | "unknown"
+      destination_app: destination.labels["app"] | "unknown"
+      destination_version: destination.labels["version"] | "unknown"
+      destination_service: destination.service.host | "unknown"
+      destination_service_name: destination.service.name | "unknown"
+      destination_service_namespace: destination.service.namespace | "unknown"
+      request_protocol: api.protocol | context.protocol | "unknown"
+      response_code: response.code | 200
+      response_flags: context.proxy_error_code | "-"
+      permissive_response_code: rbac.permissive.response_code | "none" 
+      permissive_response_policyid: rbac.permissive.effective_policy_id | "none"
+      connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
+    monitored_resource_type: '"UNSPECIFIED"'
 ---
 apiVersion: "config.istio.io/v1alpha2"
-kind: metric
+kind: instance
 metadata:
   name: requestsize
   namespace: istio-system
@@ -5764,32 +5115,34 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-  value: request.size | 0
-  dimensions:
-    reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
-    source_workload: source.workload.name | "unknown"
-    source_workload_namespace: source.workload.namespace | "unknown"
-    source_principal: source.principal | "unknown"
-    source_app: source.labels["app"] | "unknown"
-    source_version: source.labels["version"] | "unknown"
-    destination_workload: destination.workload.name | "unknown"
-    destination_workload_namespace: destination.workload.namespace | "unknown"
-    destination_principal: destination.principal | "unknown"
-    destination_app: destination.labels["app"] | "unknown"
-    destination_version: destination.labels["version"] | "unknown"
-    destination_service: destination.service.host | "unknown"
-    destination_service_name: destination.service.name | "unknown"
-    destination_service_namespace: destination.service.namespace | "unknown"
-    request_protocol: api.protocol | context.protocol | "unknown"
-    response_code: response.code | 200
-    response_flags: context.proxy_error_code | "-"
-    permissive_response_code: rbac.permissive.response_code | "none" 
-    permissive_response_policyid: rbac.permissive.effective_policy_id | "none"
-    connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
-  monitored_resource_type: '"UNSPECIFIED"'
+  compiledTemplate: metric
+  params:
+    value: request.size | 0
+    dimensions:
+      reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
+      source_workload: source.workload.name | "unknown"
+      source_workload_namespace: source.workload.namespace | "unknown"
+      source_principal: source.principal | "unknown"
+      source_app: source.labels["app"] | "unknown"
+      source_version: source.labels["version"] | "unknown"
+      destination_workload: destination.workload.name | "unknown"
+      destination_workload_namespace: destination.workload.namespace | "unknown"
+      destination_principal: destination.principal | "unknown"
+      destination_app: destination.labels["app"] | "unknown"
+      destination_version: destination.labels["version"] | "unknown"
+      destination_service: destination.service.host | "unknown"
+      destination_service_name: destination.service.name | "unknown"
+      destination_service_namespace: destination.service.namespace | "unknown"
+      request_protocol: api.protocol | context.protocol | "unknown"
+      response_code: response.code | 200
+      response_flags: context.proxy_error_code | "-"
+      permissive_response_code: rbac.permissive.response_code | "none" 
+      permissive_response_policyid: rbac.permissive.effective_policy_id | "none"
+      connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
+    monitored_resource_type: '"UNSPECIFIED"'
 ---
 apiVersion: "config.istio.io/v1alpha2"
-kind: metric
+kind: instance
 metadata:
   name: responsesize
   namespace: istio-system
@@ -5799,32 +5152,34 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-  value: response.size | 0
-  dimensions:
-    reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
-    source_workload: source.workload.name | "unknown"
-    source_workload_namespace: source.workload.namespace | "unknown"
-    source_principal: source.principal | "unknown"
-    source_app: source.labels["app"] | "unknown"
-    source_version: source.labels["version"] | "unknown"
-    destination_workload: destination.workload.name | "unknown"
-    destination_workload_namespace: destination.workload.namespace | "unknown"
-    destination_principal: destination.principal | "unknown"
-    destination_app: destination.labels["app"] | "unknown"
-    destination_version: destination.labels["version"] | "unknown"
-    destination_service: destination.service.host | "unknown"
-    destination_service_name: destination.service.name | "unknown"
-    destination_service_namespace: destination.service.namespace | "unknown"
-    request_protocol: api.protocol | context.protocol | "unknown"
-    response_code: response.code | 200
-    response_flags: context.proxy_error_code | "-"
-    permissive_response_code: rbac.permissive.response_code | "none" 
-    permissive_response_policyid: rbac.permissive.effective_policy_id | "none"
-    connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
-  monitored_resource_type: '"UNSPECIFIED"'
+  compiledTemplate: metric
+  params:
+    value: response.size | 0
+    dimensions:
+      reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
+      source_workload: source.workload.name | "unknown"
+      source_workload_namespace: source.workload.namespace | "unknown"
+      source_principal: source.principal | "unknown"
+      source_app: source.labels["app"] | "unknown"
+      source_version: source.labels["version"] | "unknown"
+      destination_workload: destination.workload.name | "unknown"
+      destination_workload_namespace: destination.workload.namespace | "unknown"
+      destination_principal: destination.principal | "unknown"
+      destination_app: destination.labels["app"] | "unknown"
+      destination_version: destination.labels["version"] | "unknown"
+      destination_service: destination.service.host | "unknown"
+      destination_service_name: destination.service.name | "unknown"
+      destination_service_namespace: destination.service.namespace | "unknown"
+      request_protocol: api.protocol | context.protocol | "unknown"
+      response_code: response.code | 200
+      response_flags: context.proxy_error_code | "-"
+      permissive_response_code: rbac.permissive.response_code | "none" 
+      permissive_response_policyid: rbac.permissive.effective_policy_id | "none"
+      connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
+    monitored_resource_type: '"UNSPECIFIED"'
 ---
 apiVersion: "config.istio.io/v1alpha2"
-kind: metric
+kind: instance
 metadata:
   name: tcpbytesent
   namespace: istio-system
@@ -5834,28 +5189,30 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-  value: connection.sent.bytes | 0
-  dimensions:
-    reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
-    source_workload: source.workload.name | "unknown"
-    source_workload_namespace: source.workload.namespace | "unknown"
-    source_principal: source.principal | "unknown"
-    source_app: source.labels["app"] | "unknown"
-    source_version: source.labels["version"] | "unknown"
-    destination_workload: destination.workload.name | "unknown"
-    destination_workload_namespace: destination.workload.namespace | "unknown"
-    destination_principal: destination.principal | "unknown"
-    destination_app: destination.labels["app"] | "unknown"
-    destination_version: destination.labels["version"] | "unknown"
-    destination_service: destination.service.host | "unknown"
-    destination_service_name: destination.service.name | "unknown"
-    destination_service_namespace: destination.service.namespace | "unknown"
-    connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
-    response_flags: context.proxy_error_code | "-"
-  monitored_resource_type: '"UNSPECIFIED"'
+  compiledTemplate: metric
+  params:
+    value: connection.sent.bytes | 0
+    dimensions:
+      reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
+      source_workload: source.workload.name | "unknown"
+      source_workload_namespace: source.workload.namespace | "unknown"
+      source_principal: source.principal | "unknown"
+      source_app: source.labels["app"] | "unknown"
+      source_version: source.labels["version"] | "unknown"
+      destination_workload: destination.workload.name | "unknown"
+      destination_workload_namespace: destination.workload.namespace | "unknown"
+      destination_principal: destination.principal | "unknown"
+      destination_app: destination.labels["app"] | "unknown"
+      destination_version: destination.labels["version"] | "unknown"
+      destination_service: destination.service.host | "unknown"
+      destination_service_name: destination.service.name | "unknown"
+      destination_service_namespace: destination.service.namespace | "unknown"
+      connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
+      response_flags: context.proxy_error_code | "-"
+    monitored_resource_type: '"UNSPECIFIED"'
 ---
 apiVersion: "config.istio.io/v1alpha2"
-kind: metric
+kind: instance
 metadata:
   name: tcpbytereceived
   namespace: istio-system
@@ -5865,28 +5222,30 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-  value: connection.received.bytes | 0
-  dimensions:
-    reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
-    source_workload: source.workload.name | "unknown"
-    source_workload_namespace: source.workload.namespace | "unknown"
-    source_principal: source.principal | "unknown"
-    source_app: source.labels["app"] | "unknown"
-    source_version: source.labels["version"] | "unknown"
-    destination_workload: destination.workload.name | "unknown"
-    destination_workload_namespace: destination.workload.namespace | "unknown"
-    destination_principal: destination.principal | "unknown"
-    destination_app: destination.labels["app"] | "unknown"
-    destination_version: destination.labels["version"] | "unknown"
-    destination_service: destination.service.host | "unknown"
-    destination_service_name: destination.service.name | "unknown"
-    destination_service_namespace: destination.service.namespace | "unknown"
-    connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
-    response_flags: context.proxy_error_code | "-"
-  monitored_resource_type: '"UNSPECIFIED"'
+  compiledTemplate: metric
+  params:
+    value: connection.received.bytes | 0
+    dimensions:
+      reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
+      source_workload: source.workload.name | "unknown"
+      source_workload_namespace: source.workload.namespace | "unknown"
+      source_principal: source.principal | "unknown"
+      source_app: source.labels["app"] | "unknown"
+      source_version: source.labels["version"] | "unknown"
+      destination_workload: destination.workload.name | "unknown"
+      destination_workload_namespace: destination.workload.namespace | "unknown"
+      destination_principal: destination.principal | "unknown"
+      destination_app: destination.labels["app"] | "unknown"
+      destination_version: destination.labels["version"] | "unknown"
+      destination_service: destination.service.host | "unknown"
+      destination_service_name: destination.service.name | "unknown"
+      destination_service_namespace: destination.service.namespace | "unknown"
+      connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
+      response_flags: context.proxy_error_code | "-"
+    monitored_resource_type: '"UNSPECIFIED"'
 ---
 apiVersion: "config.istio.io/v1alpha2"
-kind: metric
+kind: instance
 metadata:
   name: tcpconnectionsopened
   namespace: istio-system
@@ -5896,28 +5255,30 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-  value: "1"
-  dimensions:
-    reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
-    source_workload: source.workload.name | "unknown"
-    source_workload_namespace: source.workload.namespace | "unknown"
-    source_principal: source.principal | "unknown"
-    source_app: source.labels["app"] | "unknown"
-    source_version: source.labels["version"] | "unknown"
-    destination_workload: destination.workload.name | "unknown"
-    destination_workload_namespace: destination.workload.namespace | "unknown"
-    destination_principal: destination.principal | "unknown"
-    destination_app: destination.labels["app"] | "unknown"
-    destination_version: destination.labels["version"] | "unknown"
-    destination_service: destination.service.name | "unknown"
-    destination_service_name: destination.service.name | "unknown"
-    destination_service_namespace: destination.service.namespace | "unknown"
-    connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
-    response_flags: context.proxy_error_code | "-"
-  monitored_resource_type: '"UNSPECIFIED"'
+  compiledTemplate: metric
+  params:
+    value: "1"
+    dimensions:
+      reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
+      source_workload: source.workload.name | "unknown"
+      source_workload_namespace: source.workload.namespace | "unknown"
+      source_principal: source.principal | "unknown"
+      source_app: source.labels["app"] | "unknown"
+      source_version: source.labels["version"] | "unknown"
+      destination_workload: destination.workload.name | "unknown"
+      destination_workload_namespace: destination.workload.namespace | "unknown"
+      destination_principal: destination.principal | "unknown"
+      destination_app: destination.labels["app"] | "unknown"
+      destination_version: destination.labels["version"] | "unknown"
+      destination_service: destination.service.name | "unknown"
+      destination_service_name: destination.service.name | "unknown"
+      destination_service_namespace: destination.service.namespace | "unknown"
+      connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
+      response_flags: context.proxy_error_code | "-"
+    monitored_resource_type: '"UNSPECIFIED"'
 ---
 apiVersion: "config.istio.io/v1alpha2"
-kind: metric
+kind: instance
 metadata:
   name: tcpconnectionsclosed
   namespace: istio-system
@@ -5927,25 +5288,27 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-  value: "1"
-  dimensions:
-    reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
-    source_workload: source.workload.name | "unknown"
-    source_workload_namespace: source.workload.namespace | "unknown"
-    source_principal: source.principal | "unknown"
-    source_app: source.labels["app"] | "unknown"
-    source_version: source.labels["version"] | "unknown"
-    destination_workload: destination.workload.name | "unknown"
-    destination_workload_namespace: destination.workload.namespace | "unknown"
-    destination_principal: destination.principal | "unknown"
-    destination_app: destination.labels["app"] | "unknown"
-    destination_version: destination.labels["version"] | "unknown"
-    destination_service: destination.service.name | "unknown"
-    destination_service_name: destination.service.name | "unknown"
-    destination_service_namespace: destination.service.namespace | "unknown"
-    connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
-    response_flags: context.proxy_error_code | "-"
-  monitored_resource_type: '"UNSPECIFIED"'
+  compiledTemplate: metric
+  params:
+    value: "1"
+    dimensions:
+      reporter: conditional((context.reporter.kind | "inbound") == "outbound", "source", "destination")
+      source_workload: source.workload.name | "unknown"
+      source_workload_namespace: source.workload.namespace | "unknown"
+      source_principal: source.principal | "unknown"
+      source_app: source.labels["app"] | "unknown"
+      source_version: source.labels["version"] | "unknown"
+      destination_workload: destination.workload.name | "unknown"
+      destination_workload_namespace: destination.workload.namespace | "unknown"
+      destination_principal: destination.principal | "unknown"
+      destination_app: destination.labels["app"] | "unknown"
+      destination_version: destination.labels["version"] | "unknown"
+      destination_service: destination.service.name | "unknown"
+      destination_service_name: destination.service.name | "unknown"
+      destination_service_namespace: destination.service.namespace | "unknown"
+      connection_security_policy: conditional((context.reporter.kind | "inbound") == "outbound", "unknown", conditional(connection.mtls | false, "mutual_tls", "none"))
+      response_flags: context.proxy_error_code | "-"
+    monitored_resource_type: '"UNSPECIFIED"'
 ---
 apiVersion: "config.istio.io/v1alpha2"
 kind: handler
@@ -5964,7 +5327,7 @@ spec:
       metricsExpiryDuration: "10m"
     metrics:
     - name: requests_total
-      instance_name: requestcount.metric.istio-system
+      instance_name: requestcount.instance.istio-system
       kind: COUNTER
       label_names:
       - reporter
@@ -5988,7 +5351,7 @@ spec:
       - permissive_response_policyid
       - connection_security_policy
     - name: request_duration_seconds
-      instance_name: requestduration.metric.istio-system
+      instance_name: requestduration.instance.istio-system
       kind: DISTRIBUTION
       label_names:
       - reporter
@@ -6015,7 +5378,7 @@ spec:
         explicit_buckets:
           bounds: [0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1, 2.5, 5, 10]
     - name: request_bytes
-      instance_name: requestsize.metric.istio-system
+      instance_name: requestsize.instance.istio-system
       kind: DISTRIBUTION
       label_names:
       - reporter
@@ -6044,7 +5407,7 @@ spec:
           scale: 1
           growthFactor: 10
     - name: response_bytes
-      instance_name: responsesize.metric.istio-system
+      instance_name: responsesize.instance.istio-system
       kind: DISTRIBUTION
       label_names:
       - reporter
@@ -6073,7 +5436,7 @@ spec:
           scale: 1
           growthFactor: 10
     - name: tcp_sent_bytes_total
-      instance_name: tcpbytesent.metric.istio-system
+      instance_name: tcpbytesent.instance.istio-system
       kind: COUNTER
       label_names:
       - reporter
@@ -6093,7 +5456,7 @@ spec:
       - connection_security_policy
       - response_flags
     - name: tcp_received_bytes_total
-      instance_name: tcpbytereceived.metric.istio-system
+      instance_name: tcpbytereceived.instance.istio-system
       kind: COUNTER
       label_names:
       - reporter
@@ -6113,7 +5476,7 @@ spec:
       - connection_security_policy
       - response_flags
     - name: tcp_connections_opened_total
-      instance_name: tcpconnectionsopened.metric.istio-system
+      instance_name: tcpconnectionsopened.instance.istio-system
       kind: COUNTER
       label_names:
       - reporter
@@ -6133,7 +5496,7 @@ spec:
       - connection_security_policy
       - response_flags
     - name: tcp_connections_closed_total
-      instance_name: tcpconnectionsclosed.metric.istio-system
+      instance_name: tcpconnectionsclosed.instance.istio-system
       kind: COUNTER
       label_names:
       - reporter
@@ -6164,14 +5527,14 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-  match: (context.protocol == "http" || context.protocol == "grpc") && (match((request.useragent | "-"), "kube-probe*") == false)
+  match: (context.protocol == "http" || context.protocol == "grpc") && (match((request.useragent | "-"), "kube-probe*") == false) && (match((request.useragent | "-"), "Prometheus*") == false)
   actions:
   - handler: prometheus
     instances:
-    - requestcount.metric
-    - requestduration.metric
-    - requestsize.metric
-    - responsesize.metric
+    - requestcount
+    - requestduration
+    - requestsize
+    - responsesize
 ---
 apiVersion: "config.istio.io/v1alpha2"
 kind: rule
@@ -6188,8 +5551,8 @@ spec:
   actions:
   - handler: prometheus
     instances:
-    - tcpbytesent.metric
-    - tcpbytereceived.metric
+    - tcpbytesent
+    - tcpbytereceived
 ---
 apiVersion: "config.istio.io/v1alpha2"
 kind: rule
@@ -6206,7 +5569,7 @@ spec:
   actions:
   - handler: prometheus
     instances:
-    - tcpconnectionsopened.metric
+    - tcpconnectionsopened
 ---
 apiVersion: "config.istio.io/v1alpha2"
 kind: rule
@@ -6223,7 +5586,7 @@ spec:
   actions:
   - handler: prometheus
     instances:
-    - tcpconnectionsclosed.metric
+    - tcpconnectionsclosed
 ---
 apiVersion: "config.istio.io/v1alpha2"
 kind: handler
@@ -6260,7 +5623,7 @@ spec:
   actions:
   - handler: kubernetesenv
     instances:
-    - attributes.kubernetes
+    - attributes
 ---
 apiVersion: "config.istio.io/v1alpha2"
 kind: rule
@@ -6277,10 +5640,10 @@ spec:
   actions:
   - handler: kubernetesenv
     instances:
-    - attributes.kubernetes
+    - attributes
 ---
 apiVersion: "config.istio.io/v1alpha2"
-kind: kubernetes
+kind: instance
 metadata:
   name: attributes
   namespace: istio-system
@@ -6290,12 +5653,14 @@ metadata:
     heritage: Tiller
     release: istio
 spec:
-  # Pass the required attribute data to the adapter
-  source_uid: source.uid | ""
-  source_ip: source.ip | ip("0.0.0.0") # default to unspecified ip addr
-  destination_uid: destination.uid | ""
-  destination_port: destination.port | 0
-  attribute_bindings:
+  compiledTemplate: kubernetes
+  params:
+    # Pass the required attribute data to the adapter
+    source_uid: source.uid | ""
+    source_ip: source.ip | ip("0.0.0.0") # default to unspecified ip addr
+    destination_uid: destination.uid | ""
+    destination_port: destination.port | 0
+  attributeBindings:
     # Fill the new attributes from the adapter produced output.
     # $out refers to an instance of OutputTemplate message
     source.ip: $out.source_pod_ip | ip("0.0.0.0")

@@ -35,13 +35,13 @@ set -e
 # entries appropriately.
 
 # Azure
-GATEWAY1="1.1.1.1"
+GATEWAY1="169.62.77.42"
 
 # Google
-GATEWAY2="2.2.2.2"
+GATEWAY2="159.122.148.147"
 
 # On-Premises
-GATEWAY3="3.3.3.3"
+GATEWAY3="135.90.77.34"
 
 mkdir -p manifests_se
 cp -r istio/service_entries/ manifests_se

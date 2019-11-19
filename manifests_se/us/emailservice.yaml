@@ -1,20 +1,20 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: ServiceEntry
 metadata:
-  name: redis-cart
+  name: emailservice
 spec:
   hosts:
-  - redis-cart.default.global
+  - emailservice.default.global
   location: MESH_INTERNAL
   ports:
-  - name: redis
-    number: 6379
-    protocol: tcp
+  - name: grpc
+    number: 5000
+    protocol: grpc
   resolution: STATIC
   addresses:
-  - 240.255.3.6
+  - 240.255.0.2
   endpoints:
-  - address: GATEWAY3
+  - address: 169.62.77.42
     ports:
-      redis: 15443
+      grpc: 15443
 ---
